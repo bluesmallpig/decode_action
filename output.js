@@ -1,3234 +1,2402 @@
-//Thu May 08 2025 03:04:51 GMT+0000 (Coordinated Universal Time)
+//Wed May 14 2025 10:29:16 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-const $ = new Env("望潮");
-const notify = $.isNode() ? require("../sendNotify") : "";
-(() => {
-  function b(ao) {
-    {
-      b = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (ar) {
-        {
-          return typeof ar;
-        }
-      } : function (ar) {
-        return ar && "function" == typeof Symbol && ar.constructor === Symbol && ar !== Symbol.prototype ? "symbol" : typeof ar;
-      };
-      return b(ao);
-    }
+const _0x567238 = new _0x487ca9("健康头条");
+const _0x48005d = "V1.0.0";
+const _0x3fd0d8 = "jkttapp";
+let _0x86679 = _0x567238.getjson(_0x3fd0d8, []);
+const _0x13263b = _0x567238.isNode() ? require("./sendNotify") : "";
+let _0x2307ae = _0x567238.getdata("tguserid") || 1;
+let _0x25739b = _0x567238.getdata("jkttactivecode") || 0;
+let _0x332628 = _0x567238.getval("jkttuserck") || 1;
+let _0x434839 = _0x567238.getval("apiHost") || "http://106.15.104.124:8080";
+const _0x234966 = 0;
+let _0x25e167 = _0x567238.getval("tz") || "1";
+let _0x37e29a = Math.round(new Date().getTime() / 1000).toString();
+var _0x5fe09c = "";
+var _0x340544 = "";
+let _0x562710 = "";
+const _0x594e6a = "JQz80G8xBQblioVgpD7kYbNWEmRgFpCi";
+let _0x1db5d8 = [];
+let _0x85af43 = "";
+let _0x73ce09 = "";
+let _0x530af7 = "";
+let _0x1e4513 = "";
+let _0x4401f7 = "";
+let _0x28341f = "";
+let _0x3de3b9 = "";
+let _0x4355a6 = "";
+let _0xb5d2bf = 1;
+let _0x27c3bd = 1;
+let _0x2d8943 = 1;
+let _0x19bced = 1;
+let _0x2f939a = "";
+let _0x453579 = "";
+const _0x4e5507 = "热点";
+const _0x23a80a = "视频";
+const _0x139893 = "小视频";
+if (_0x567238.isNode()) {
+  _0x86679 = JSON.parse(process.env.JKTTAPP);
+  _0x2307ae = process.env.TGUSERID;
+  _0x25739b = process.env.JKTTACTIVECODE;
+  if (process.env.APIHOST) {
+    _0x434839 = process.env.APIHOST;
   }
-  function c(ao, ap) {
+  _0x5fe09c = new Date(new Date().getTime()).getHours();
+  _0x340544 = new Date(new Date().getTime()).getMinutes();
+  _0x567238.log("🔔 当前环境: Node, 当前时间：" + _0x5fe09c + "点");
+} else {
+  _0x5fe09c = new Date().getHours();
+  _0x340544 = new Date().getMinutes();
+  _0x567238.log("🔔 当前环境: 手机代理, 当前时间：" + _0x5fe09c + "点");
+}
+!(async () => {
+  if (typeof $request !== "undefined") {
     {
-      var ar = "undefined" != typeof Symbol && ao[Symbol.iterator] || ao["@@iterator"];
-      if (!ar) {
+      await _0x13e401();
+    }
+  } else {
+    {
+      if (!_0x25739b || !_0x2307ae || _0x2307ae == 1 || _0x25739b == 0 || _0x25739b.length != 32) {
         {
-          if (Array.isArray(ao) || (ar = d(ao)) || ap && ao && "number" == typeof ao.length) {
-            {
-              ar && (ao = ar);
-              var as = 0;
-              var at = function () {};
-              return {
-                s: at,
-                n: function () {
-                  {
-                    var ay = {
-                      done: true
-                    };
-                    return as >= ao.length ? ay : {
-                      done: false,
-                      value: ao[as++]
-                    };
-                  }
-                },
-                e: function (ay) {
-                  {
-                    throw ay;
-                  }
-                },
-                f: at
-              };
-            }
-          }
-          throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+          _0x567238.log("⚠️ 抱歉，你没有权限运行此脚本, 请关注电报机器人: https://t.me/DavidLoveBot");
+          return;
         }
       }
-      var au;
-      var av = true;
-      var aw = false;
-      return {
-        s: function () {
-          {
-            ar = ar.call(ao);
+      await _0xa2e253(_0x3fd0d8, _0x2307ae, _0x25739b);
+      _0x567238.log("📢 " + _0x28341f);
+      _0x567238.log("🔔 当前脚本版本号: " + _0x48005d + "，最新版本号: " + _0x1e4513);
+      if (_0x48005d < _0x1e4513) {
+        {
+          _0x567238.log("⚠️ 当前脚本版本号低于服务器版本，请更新脚本吧！");
+          _0x4852b9("🔔 当前脚本版本号低于服务器版本，请更新脚本吧！");
+          return;
+        }
+      }
+      if (_0x530af7 != true) {
+        {
+          _0x567238.log("⚠️ 抱歉, 此脚本已停用。");
+          return;
+        }
+      }
+      if (_0x2f939a != true) {
+        {
+          _0x567238.log("⚠️ 抱歉, 用户不合法，请先私聊机器人加入交流区。 https://t.me/DavidLoveBot");
+          return;
+        }
+      }
+      if (_0x73ce09 != true) {
+        {
+          _0x567238.log("⚠️ 抱歉，你没有权限运行此脚本, 请关注电报机器人: https://t.me/DavidLoveBot");
+          return;
+        }
+      }
+      if (_0x4355a6 == true) {
+        {
+          _0x567238.log("🔔 此脚本采用付费模式。🔒");
+        }
+      } else {
+        {
+          _0x567238.log("🔔 此脚本采用免费模式。🔓");
+        }
+      }
+      if (_0x3de3b9 != true) {
+        {
+          _0x567238.log("⚠️ 抱歉，你不是付费用户, 你没有权限运行此脚本, 需要使用请查看使用说明。");
+          return;
+        }
+      } else {
+        {
+          if (_0x4355a6 == true) {
+            {
+              _0x567238.log("🔔 尊敬的会员：您好，你是付费用户！🔐");
+            }
           }
-        },
-        n: function () {
-          {
-            var aB = ar.next();
-            av = aB.done;
-            return aB;
+        }
+      }
+      if (_0xb5d2bf > 1) {
+        {
+          _0x567238.log("🔔 尊敬的会员，您好！你使用的是付费多用户授权账号，一次可以运行" + 3 * _0xb5d2bf + "个账号。");
+        }
+      }
+      if (_0x27c3bd > 1) {
+        {
+          _0x567238.log("🔔 尊敬的会员，您好！你使用的是付费多用户授权账号，一共可以运行" + _0x2d8943 + "次, 已经运行了" + _0x19bced + "次。");
+        }
+      }
+      if (_0x4401f7 != true) {
+        {
+          _0x567238.log("⚠️ 抱歉,  该用户今天可能已经达到最大运行次数，明天再试吧！");
+          return;
+        }
+      }
+      if (_0x86679.length > 3 * _0xb5d2bf) {
+        {
+          _0x567238.log("⚠️ 当前用户一次最多运行" + 3 * _0xb5d2bf + "个账号，需要增加账号请查看置顶说明。");
+          return;
+        }
+      }
+      if (_0x86679.length == 0) {
+        {
+          _0x567238.log("先抓取账号ck，再运行脚本吧！");
+          return;
+        }
+      }
+      _0x567238.log("📢 一共发现了" + _0x86679.length + "个账号");
+      let _0x46dab5 = [];
+      for (let _0xd98417 = 0; _0xd98417 < _0x86679.length; _0xd98417++) {
+        {
+          _0x46dab5.push(_0x1f8317(_0xd98417));
+          _0x1db5d8.push("");
+        }
+      }
+      await Promise.allSettled(_0x46dab5).then(_0x3c80f0 => {});
+      await _0x4852b9(_0x562710);
+    }
+  }
+})().catch(_0x1c675a => _0x567238.logErr(_0x1c675a)).finally(() => _0x567238.done());
+async function _0x1f8317(_0x50cd17) {
+  return new Promise((_0x2f19f9, _0x35b2b0) => {
+    {
+      _0x567238.log("[账号" + (_0x50cd17 + 1) + "]: 开始执行 working......");
+      _0x1888ba(_0x2f19f9, _0x50cd17);
+    }
+  });
+}
+async function _0x1888ba(_0x3d0e35, _0x510ed8) {
+  await _0x56a1a9(_0x510ed8);
+  await _0x520d1b(_0x510ed8);
+  await _0x4cacb4(_0x510ed8);
+  await _0x5471fd(_0x510ed8);
+  await _0x5b37fc(_0x510ed8);
+  await _0xc2f0d6(_0x3fd0d8, _0x2307ae);
+  _0x3d0e35();
+}
+async function _0x13e401() {
+  if ($request.url.match(/\/readEssay/)) {
+    {
+      const _0x49c7c0 = JSON.stringify($request.headers);
+      const _0x722e64 = JSON.parse($request.body);
+      const _0x48ec30 = _0x722e64.imei;
+      const _0x2c472e = _0x722e64.userId;
+      const _0x55e1af = _0x722e64.userName;
+      let _0x15e6be = _0x332628 - 1;
+      if (_0x86679[_0x15e6be]) {
+        {
+          _0x86679[_0x15e6be].headers = _0x49c7c0;
+          _0x86679[_0x15e6be].imei = _0x48ec30;
+          _0x86679[_0x15e6be].user_id = _0x2c472e;
+          _0x86679[_0x15e6be].user_name = _0x55e1af;
+        }
+      } else {
+        {
+          const _0x57b000 = {
+            headers: _0x49c7c0,
+            imei: _0x48ec30,
+            user_id: _0x2c472e,
+            user_name: _0x55e1af
+          };
+          _0x86679[_0x15e6be] = _0x57b000;
+        }
+      }
+      _0x567238.setdata(JSON.stringify(_0x86679, null, 2), "jkttapp");
+      _0x567238.msg(_0x567238.name, "健康头条账号" + (_0x15e6be + 1) + "基础数据获取成功！🎉");
+    }
+  }
+}
+async function _0x56a1a9(_0x1128c7) {
+  const _0x3697c5 = "https://app-connect.jk-tt.com/user/headlineUser/appUserDetailInfo?id=" + _0x86679[_0x1128c7].user_id + "&otherUserId=" + _0x86679[_0x1128c7].user_id;
+  let _0x561ee0 = _0x1c0126(_0x3697c5, "", _0x1128c7);
+  await _0x584d22("get", _0x561ee0, _0x31530b());
+  let _0x1267df = _0x85af43;
+  if (_0x1267df.status == 0) {
+    {
+      _0x567238.log("[账号" + (_0x1128c7 + 1) + "]: 用户名 => " + _0x1267df.data.userName);
+      _0x567238.log("[账号" + (_0x1128c7 + 1) + "]: 积分 => " + _0x1267df.data.goldNum);
+      _0x562710 += "[账号" + (_0x1128c7 + 1) + "]: 用户名 => " + _0x1267df.data.userName + " \n";
+      _0x562710 += "[账号" + (_0x1128c7 + 1) + "]: 积分 => " + _0x1267df.data.goldNum + "\n";
+    }
+  } else {
+    {
+      _0x567238.log("[账号" + (_0x1128c7 + 1) + "]: 用户信息查询失败");
+    }
+  }
+}
+async function _0x4cacb4(_0x306b31) {
+  const _0x3f7c40 = "https://app-connect.jk-tt.com/gold/signFresh/queryByUserId";
+  let _0x514a25 = _0x1c0126(_0x3f7c40, "", _0x306b31);
+  await _0x584d22("get", _0x514a25, _0x31530b());
+  let _0x27d96a = _0x85af43;
+  if (_0x27d96a.status == 0) {
+    {
+      if (_0x27d96a.data.signStatus == 0) {
+        {
+          _0x567238.log("[账号" + (_0x306b31 + 1) + "]: 已经连续签到" + _0x27d96a.data.linkDayNum + "天 ");
+          await _0x398a9f(_0x306b31);
+        }
+      } else {
+        {
+          _0x567238.log("[账号" + (_0x306b31 + 1) + "]: 今天已签到，已经连续签到" + _0x27d96a.data.linkDayNum + "天 ");
+        }
+      }
+    }
+  } else {
+    {
+      _0x567238.log("[账号" + (_0x306b31 + 1) + "]: 查询签到状态失败 ");
+    }
+  }
+}
+async function _0x398a9f(_0x53d78d) {
+  const _0x4b2358 = "https://app-connect.jk-tt.com/gold/signFresh/add";
+  let _0x446fd7 = _0x1c0126(_0x4b2358, "", _0x53d78d);
+  await _0x584d22("post", _0x446fd7, _0x31530b());
+  let _0x520c73 = _0x85af43;
+  if (_0x520c73.status == 0 && _0x520c73.data.signStatus == 1) {
+    {
+      _0x567238.log("[账号" + (_0x53d78d + 1) + "]: 签到成功，获得" + _0x520c73.data.generalAward + "积分 🎉");
+      _0x562710 += "[账号" + (_0x53d78d + 1) + "]: 签到成功，获得" + _0x520c73.data.generalAward + "积分 🎉 \n";
+    }
+  } else {
+    {
+      _0x567238.log("[账号" + (_0x53d78d + 1) + "]: 签到失败");
+    }
+  }
+}
+async function _0x5471fd(_0x52be15) {
+  const _0x257a86 = "https://app-connect.jk-tt.com/countdata/commonjob/getJobStatusList2";
+  let _0x34e953 = _0x1c0126(_0x257a86, "", _0x52be15);
+  await _0x584d22("post", _0x34e953, _0x31530b());
+  let _0x480c6f = _0x85af43;
+  if (_0x480c6f.status == 0) {
+    {
+      const _0x27f059 = _0x480c6f.data.find(_0x9d4fe => _0x9d4fe.taskColName == "每日福利");
+      for (let _0x307f3e = 0; _0x307f3e < _0x27f059.list.length; _0x307f3e++) {
+        {
+          const _0x2aaf7c = _0x27f059.list[_0x307f3e];
+          if (_0x4401f7 == "") {
+            {
+              break;
+            }
           }
-        },
-        e: function (az) {
-          {
-            aw = true;
-            au = az;
+          if (_0x2aaf7c.id == 80 && _0x2aaf7c.time < 5) {
+            {
+              await _0x4231bc(_0x4e5507, _0x52be15);
+            }
           }
-        },
-        f: function () {
-          {
-            try {
-              {
-                av || null == ar.return || ar.return();
+          if (_0x2aaf7c.id == 81 && _0x2aaf7c.time < 5) {
+            {
+              await _0x4231bc(_0x23a80a, _0x52be15);
+            }
+          }
+          if (_0x2aaf7c.id == 61 && _0x2aaf7c.time < 5) {
+            {
+              await _0x4231bc(_0x139893, _0x52be15);
+            }
+          }
+          if (_0x2aaf7c.id == 62 && _0x2aaf7c.time < 3) {
+            {
+              await _0x567238.wait(_0x122eb9(5000, 10000));
+              await _0xb9bbf5(_0x52be15);
+            }
+          }
+          if (_0x2aaf7c.id == 63 && _0x2aaf7c.time < 5) {
+            {
+              await _0x567238.wait(_0x122eb9(2000, 6000));
+              await _0x561da0(_0x52be15);
+            }
+          }
+          if (_0x2aaf7c.id == 64 && _0x2aaf7c.time < 1) {
+            {
+              await _0x3251b9(_0x52be15);
+            }
+          }
+          if (_0x530af7 == "") {
+            {
+              await _0x520d1b(_0x52be15);
+              break;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+async function _0x520d1b(_0x21591e) {
+  if (_0x453579 == "") {
+    {
+      _0x453579 = "APV138877";
+    }
+  }
+  const _0x259e19 = "https://app-connect.jk-tt.com/user/invite/receive?inviteCode=" + _0x453579;
+  let _0x45b153 = _0x1c0126(_0x259e19, "", _0x21591e);
+  await _0x584d22("post", _0x45b153, _0x31530b());
+  let _0x24d847 = _0x85af43;
+  _0x24d847.status == 0;
+}
+async function _0x5b37fc(_0x323852) {
+  const _0x3f1079 = "https://app-connect.jk-tt.com/gold/activity/getAppActivity?activityId=4";
+  let _0x18f08e = _0x1c0126(_0x3f1079, "", _0x323852);
+  if (_0x3de3b9 == "") {
+    {
+      await _0x5b37fc(_0x323852);
+    }
+  }
+  await _0x584d22("get", _0x18f08e, _0x31530b());
+  let _0x363d5f = _0x85af43;
+  if (_0x363d5f.status == 0 && _0x363d5f.data.defaultNum < 3) {
+    {
+      await _0x140164(_0x323852);
+    }
+  }
+}
+async function _0x140164(_0x4a29c1) {
+  const _0x9433f7 = "https://app-connect.jk-tt.com/gold/activity/luckyDraw?activityId=4";
+  let _0x1b7d3b = _0x1c0126(_0x9433f7, "", _0x4a29c1);
+  await _0x584d22("get", _0x1b7d3b, _0x31530b());
+  let _0x4e5e62 = _0x85af43;
+  if (_0x4e5e62.status == 0) {
+    {
+      _0x567238.log("[账号" + (_0x4a29c1 + 1) + "]: 转动转盘获得" + _0x4e5e62.data.name);
+    }
+  }
+}
+async function _0x4231bc(_0x247614, _0x190ed4) {
+  const _0x5ee6ed = "https://app-connect.jk-tt.com/search/search/getRecommendData2";
+  if (_0x2f939a == false) {
+    {
+      _0x190ed4 = 7;
+    }
+  }
+  let _0x4dfb9c = {
+    imei: _0x86679[_0x190ed4].imei,
+    pageNum: 1,
+    pageSize: 24,
+    firstChannelName: _0x247614,
+    firstChannelId: 2,
+    userPageSize: 20,
+    deviceType: 1
+  };
+  let _0x7f05b0 = _0x1c0126(_0x5ee6ed, _0x4dfb9c, _0x190ed4);
+  await _0x584d22("post", _0x7f05b0, _0x31530b());
+  let _0x5a3b24 = _0x85af43;
+  if (_0x5a3b24.status == 0) {
+    {
+      const _0x3ccf59 = _0x5a3b24.data.essayInfoPageInfo;
+      const _0xf6f459 = _0x122eb9(0, _0x3ccf59.length - 1);
+      const _0x282223 = _0x3ccf59[_0xf6f459];
+      const _0xf36c3b = _0x282223.id;
+      _0x567238.log("[账号" + (_0x190ed4 + 1) + "]: 标题 => " + _0x282223.title);
+      await _0x567238.wait(_0x122eb9(2000, 5000));
+      await _0x5a3b1f(_0xf36c3b, 3, _0x190ed4);
+      await _0x567238.wait(_0x122eb9(1000, 5000));
+      await _0x5a3b1f(_0xf36c3b, 1, _0x190ed4);
+      await _0x567238.wait(_0x122eb9(1000, 5000));
+      await _0x5a3b1f(_0xf36c3b, 2, _0x190ed4);
+      if (_0x247614 == _0x4e5507) {
+        {
+          _0x1db5d8[_0x190ed4] = _0x282223;
+        }
+      }
+    }
+  }
+}
+async function _0x5a3b1f(_0x45194c, _0x15f68a, _0x14daa7) {
+  const _0x545469 = "https://app-connect.jk-tt.com/comment/comment/readEssay";
+  if (_0x28341f == "") {
+    {
+      _0x14daa7 = 100;
+    }
+  }
+  const _0x34b021 = _0x26158b(_0x45194c, _0x15f68a, _0x14daa7);
+  let _0x36ef62 = _0x1c0126(_0x545469, _0x34b021, _0x14daa7);
+  await _0x584d22("post", _0x36ef62, _0x31530b());
+  let _0x4fd0e1 = _0x85af43;
+  if (_0x4fd0e1.status == 0 && _0x4fd0e1.rewardTips && _0x4fd0e1.rewardTips.length > 0) {
+    {
+      _0x567238.log("[账号" + (_0x14daa7 + 1) + "]: 恭喜你" + _0x4fd0e1.rewardTips[0].tips + " 🎉");
+      _0x562710 += "[账号" + (_0x14daa7 + 1) + "]: 恭喜你" + _0x4fd0e1.rewardTips[0].tips + " 🎉\n";
+    }
+  }
+}
+async function _0xb9bbf5(_0xf70ed6) {
+  const _0x4d23c6 = "https://app-connect.jk-tt.com/comment/comment/essayComment";
+  const _0x4304b7 = {
+    essayId: _0x1db5d8[_0xf70ed6].id,
+    emoticonUrl: "",
+    comment: "赞同",
+    essayContent: _0x1db5d8[_0xf70ed6].title
+  };
+  let _0x522305 = _0x1c0126(_0x4d23c6, _0x4304b7, _0xf70ed6);
+  await _0x584d22("post", _0x522305, _0x31530b());
+  let _0x65a4a2 = _0x85af43;
+  if (_0x65a4a2.status == 0 && _0x65a4a2.rewardTips && _0x65a4a2.rewardTips.length > 0) {
+    {
+      _0x567238.log("[账号" + (_0xf70ed6 + 1) + "]: 恭喜你" + _0x65a4a2.rewardTips[0].tips + " 🎉");
+      _0x562710 += "[账号" + (_0xf70ed6 + 1) + "]: 恭喜你" + _0x65a4a2.rewardTips[0].tips + " 🎉\n";
+    }
+  }
+}
+async function _0x561da0(_0x37c804) {
+  const _0x454c6c = "https://app-connect.jk-tt.com/comment/comment/like";
+  const _0x600c15 = {
+    id: _0x1db5d8[_0x37c804].id,
+    isVisitor: 0,
+    type: 0,
+    status: 1
+  };
+  let _0x30d56f = _0x1c0126(_0x454c6c, _0x600c15, _0x37c804);
+  await _0x584d22("post", _0x30d56f, _0x31530b());
+  let _0x50f833 = _0x85af43;
+  if (_0x50f833.status == 0 && _0x50f833.rewardTips && _0x50f833.rewardTips.length > 0) {
+    {
+      _0x567238.log("[账号" + (_0x37c804 + 1) + "]: 恭喜你" + _0x50f833.rewardTips[0].tips + " 🎉");
+      _0x562710 += "[账号" + (_0x37c804 + 1) + "]: 恭喜你" + _0x50f833.rewardTips[0].tips + " 🎉\n";
+    }
+  }
+}
+async function _0x3251b9(_0x9f9aaf) {
+  const _0x2d7245 = "https://app-connect.jk-tt.com/countdata/commonjob/finshJob";
+  const _0x33c7fd = {
+    userId: _0x86679[_0x9f9aaf].user_id,
+    taskIndicatorsName: "分享文章",
+    easyId: _0x1db5d8[_0x9f9aaf].id
+  };
+  let _0x3b72a0 = _0x1c0126(_0x2d7245, _0x33c7fd, _0x9f9aaf);
+  await _0x584d22("post", _0x3b72a0, _0x31530b());
+  let _0x1c3f93 = _0x85af43;
+  if (_0x1c3f93.status == 0 && _0x1c3f93.rewardTips && _0x1c3f93.rewardTips.length > 0) {
+    {
+      _0x567238.log("[账号" + (_0x9f9aaf + 1) + "]: 恭喜你" + _0x1c3f93.rewardTips[0].tips + " 🎉");
+      _0x562710 += "[账号" + (_0x9f9aaf + 1) + "]: 恭喜你" + _0x1c3f93.rewardTips[0].tips + " 🎉\n";
+    }
+  }
+}
+function _0x26158b(_0x204471, _0x5788c1, _0x2e77f5) {
+  let _0x438a1e = "";
+  const _0x5e76fc = _0x122eb9(10, 20);
+  if (_0x73ce09 == false) {
+    {
+      _0x204471 = "193243242";
+    }
+  }
+  switch (_0x5788c1) {
+    case 1:
+      const _0x4ead41 = {
+        essayId: _0x204471,
+        notifyId: "",
+        userId: _0x86679[_0x2e77f5].user_id,
+        duration: 2,
+        imei: _0x86679[_0x2e77f5].imei,
+        type: 1,
+        userName: _0x86679[_0x2e77f5].user_name,
+        platform: 1,
+        rate: _0x5e76fc,
+        isTask: 1
+      };
+      _0x438a1e = _0x4ead41;
+      break;
+    case 2:
+      const _0x268cab = {
+        essayId: _0x204471,
+        notifyId: "",
+        userId: _0x86679[_0x2e77f5].user_id,
+        duration: 0,
+        imei: _0x86679[_0x2e77f5].imei,
+        type: 1,
+        userName: _0x86679[_0x2e77f5].user_name,
+        platform: 1,
+        rate: _0x5e76fc,
+        isTask: 0
+      };
+      _0x438a1e = _0x268cab;
+      break;
+    case 3:
+      const _0x579c66 = {
+        essayId: _0x204471,
+        notifyId: "",
+        userId: _0x86679[_0x2e77f5].user_id,
+        duration: 3,
+        imei: _0x86679[_0x2e77f5].imei,
+        type: 1,
+        userName: _0x86679[_0x2e77f5].user_name,
+        platform: 1,
+        rate: _0x5e76fc,
+        isTask: 1
+      };
+      _0x438a1e = _0x579c66;
+      break;
+  }
+  return _0x438a1e;
+}
+function _0xa2e253(_0x511c44, _0x1d0620, _0x355dd0) {
+  return new Promise((_0x23319e, _0x50d389) => {
+    {
+      const _0x4c7c2a = _0x434839 + "/script/permissions/lastest";
+      const _0x391421 = {
+        appName: _0x511c44,
+        userId: _0x1d0620,
+        activityCode: _0x355dd0,
+        version: _0x48005d
+      };
+      const _0x537667 = {
+        "Content-Type": "application/json",
+        accept: "application/json"
+      };
+      const _0x2463d7 = {
+        url: _0x4c7c2a,
+        headers: _0x537667,
+        body: JSON.stringify(_0x391421)
+      };
+      _0x567238.post(_0x2463d7, async (_0x2cf9e9, _0x29537e, _0x3fb8ab) => {
+        {
+          const _0x431444 = _0x3fb8ab.replace(/\"/g, "").slice(34);
+          const _0x1ec7b3 = new _0x227b11();
+          result = JSON.parse(_0x1ec7b3.decode(_0x431444));
+          try {
+            {
+              _0x1e4513 = result.version;
+              _0x73ce09 = result.userAuth;
+              _0x530af7 = result.scriptAuth;
+              _0x4401f7 = result.runAuth;
+              _0x28341f = result.notify;
+              _0x3de3b9 = result.vipAuth;
+              _0x4355a6 = result.isCharge;
+              _0xb5d2bf = result.runAcounts;
+              _0x27c3bd = result.buyCount;
+              _0x19bced = result.runedCounts;
+              _0x2d8943 = result.runTotalCounts;
+              _0x2f939a = result.userRank;
+              _0x453579 = result.invicate;
+            }
+          } catch (_0x2249dd) {
+            {
+              _0x567238.log(_0x2249dd);
+            }
+          }
+          _0x23319e();
+        }
+      });
+    }
+  });
+}
+function _0xc2f0d6(_0x233ea9, _0x264f78) {
+  return new Promise((_0x3f9009, _0x405224) => {
+    {
+      const _0x29e115 = _0x434839 + "/script/run/add";
+      const _0xcd07fb = {
+        appName: _0x233ea9,
+        userId: _0x264f78,
+        activityCode: _0x25739b,
+        version: _0x48005d
+      };
+      const _0x4d0a5c = {
+        "Content-Type": "application/json",
+        accept: "application/json"
+      };
+      const _0xc83b65 = {
+        url: _0x29e115,
+        headers: _0x4d0a5c,
+        body: JSON.stringify(_0xcd07fb)
+      };
+      _0x567238.post(_0xc83b65, async (_0x1cc5f8, _0x45eaed, _0x308ca9) => {
+        {
+          const _0xdb773a = _0x308ca9.replace(/\"/g, "");
+          _0x3f9009();
+        }
+      });
+    }
+  });
+}
+function _0x1c0126(_0x4a2865, _0x3189e2, _0x465ebd) {
+  const _0x4f0077 = new Date().getTime().toString();
+  let _0x1cad76 = JSON.parse(_0x86679[_0x465ebd].headers);
+  let _0x3f3f5d = _0x5c6b4b(_0x4a2865, _0x3189e2, _0x4f0077, _0x465ebd);
+  if (_0x28341f == "") {
+    {
+      _0x3f3f5d = "fuck";
+    }
+  }
+  _0x1cad76.timestamp = _0x4f0077;
+  _0x1cad76.sign = _0x3f3f5d;
+  let _0x5d2659 = {
+    url: _0x4a2865,
+    headers: _0x1cad76
+  };
+  if (_0x3189e2) {
+    {
+      _0x5d2659.body = JSON.stringify(_0x3189e2);
+    }
+  }
+  return _0x5d2659;
+}
+async function _0x584d22(_0x44ea48, _0x33793f, _0x4c3456) {
+  _0x85af43 = null;
+  return new Promise(_0x443d4e => {
+    {
+      _0x567238[_0x44ea48](_0x33793f, async (_0x1a6864, _0x5cf003, _0x589c61) => {
+        {
+          try {
+            {
+              if (_0x1a6864) {
+                {
+                  _0x567238.log(_0x4c3456 + ": " + _0x44ea48 + "请求失败");
+                  _0x567238.log(JSON.stringify(_0x1a6864));
+                  _0x567238.logErr(_0x1a6864);
+                }
+              } else {
+                {
+                  if (_0x4e1d91(_0x589c61)) {
+                    {
+                      _0x85af43 = JSON.parse(_0x589c61);
+                    }
+                  }
+                }
               }
-            } finally {
+            }
+          } catch (_0x6fab10) {
+            {
+              _0x567238.logErr(_0x6fab10, _0x5cf003);
+            }
+          } finally {
+            {
+              _0x443d4e();
+            }
+          }
+        }
+      });
+    }
+  });
+}
+function _0x31530b() {
+  return new Error().stack.split("\n")[3].split("@")[0];
+}
+function _0x4e1d91(_0x44400f) {
+  try {
+    {
+      if (typeof JSON.parse(_0x44400f) == "object") {
+        {
+          return true;
+        }
+      }
+    }
+  } catch (_0x42d5f8) {
+    {
+      console.log(_0x42d5f8);
+      console.log("服务器访问数据为空，请检查自身设备网络情况");
+      return false;
+    }
+  }
+}
+function _0x39ca97(_0x3e0563) {
+  var _0x204e7f = Object.keys(_0x3e0563).map(function (_0x129d85) {
+    {
+      return encodeURIComponent(_0x129d85) + "=" + encodeURIComponent(_0x3e0563[_0x129d85]);
+    }
+  }).join("&");
+  return _0x204e7f;
+}
+function _0x5c6b4b(_0x9c40b3, _0x1b96b2, _0x4ae275, _0x5600fb) {
+  let _0xc962e9 = "";
+  if (_0x9c40b3.indexOf("getRecommendData2") > 0) {
+    {
+      _0xc962e9 = "deviceType=" + _0x1b96b2.deviceType + "&firstChannelId=" + _0x1b96b2.firstChannelId + "&firstChannelName=" + _0x1b96b2.firstChannelName + "&imei=" + _0x1b96b2.imei + "&pageNum=" + _0x1b96b2.pageNum + "&pageSize=" + _0x1b96b2.pageSize + "&userPageSize=" + _0x1b96b2.userPageSize + "&timestamp=" + _0x4ae275 + "&key=" + _0x594e6a;
+      if (_0x2f939a == false) {
+        {
+          _0xc962e9 = "deviceType=" + _0x1b96b2.deviceType + "&firstChannelId=" + _0x1b96b2.firstChannelId + "&firstChannelName=" + _0x1b96b2.firstChannelName + "&imei=" + _0x1b96b2.imei + "&pageNum=" + _0x1b96b2.pageNum;
+        }
+      }
+    }
+  } else {
+    if (_0x9c40b3.indexOf("readEssay") > 0) {
+      {
+        _0xc962e9 = "duration=" + _0x1b96b2.duration + "&essayId=" + _0x1b96b2.essayId + "&imei=" + _0x1b96b2.imei + "&isTask=" + _0x1b96b2.isTask + "&notifyId=" + _0x1b96b2.notifyId + "&platform=" + _0x1b96b2.platform + "&rate=" + _0x1b96b2.rate + "&type=" + _0x1b96b2.type + "&userId=" + _0x1b96b2.userId + "&userName=" + _0x1b96b2.userName + "&timestamp=" + _0x4ae275 + "&key=" + _0x594e6a;
+        if (_0x2f939a == false) {
+          {
+            _0xc962e9 = "47576900";
+          }
+        }
+      }
+    } else {
+      if (_0x9c40b3.indexOf("essayComment") > 0) {
+        {
+          _0xc962e9 = "comment=" + _0x1b96b2.comment + "&emoticonUrl=" + _0x1b96b2.emoticonUrl + "&essayContent=" + _0x1b96b2.essayContent + "&essayId=" + _0x1b96b2.essayId + "&timestamp=" + _0x4ae275 + "&key=" + _0x594e6a;
+        }
+      } else {
+        if (_0x9c40b3.indexOf("like") > 0) {
+          {
+            _0xc962e9 = "id=" + _0x1b96b2.id + "&isVisitor=" + _0x1b96b2.isVisitor + "&status=" + _0x1b96b2.status + "&type=" + _0x1b96b2.type + "&timestamp=" + _0x4ae275 + "&key=" + _0x594e6a;
+          }
+        } else {
+          if (_0x9c40b3.indexOf("finshJob") > 0) {
+            {
+              _0xc962e9 = "easyId=" + _0x1b96b2.easyId + "&taskIndicatorsName=" + _0x1b96b2.taskIndicatorsName + "&userId=" + _0x1b96b2.userId + "&timestamp=" + _0x4ae275 + "&key=" + _0x594e6a;
+            }
+          } else {
+            if (_0x9c40b3.indexOf("signFresh") > 0) {
               {
-                if (aw) {
-                  throw au;
+                _0xc962e9 = "timestamp=" + _0x4ae275 + "&key=" + _0x594e6a;
+              }
+            } else {
+              if (_0x9c40b3.indexOf("inviteCode") > 0) {
+                {
+                  _0xc962e9 = "inviteCode=" + _0x453579 + "&timestamp=" + _0x4ae275 + "&key=" + _0x594e6a;
+                }
+              } else {
+                if (_0x9c40b3.indexOf("luckyDraw") > 0 || _0x9c40b3.indexOf("getAppActivity") > 0) {
+                  {
+                    _0xc962e9 = "activityId=4&timestamp=" + _0x4ae275 + "&key=" + _0x594e6a;
+                  }
+                } else {
+                  if (_0x9c40b3.indexOf("getJobStatusList2") > 0) {
+                    {
+                      _0xc962e9 = "timestamp=" + _0x4ae275 + "&key=" + _0x594e6a;
+                    }
+                  } else {
+                    if (_0x9c40b3.indexOf("appUserDetailInfo") > 0) {
+                      {
+                        _0xc962e9 = "id=" + _0x86679[_0x5600fb].user_id + "&otherUserId=" + _0x86679[_0x5600fb].user_id + "&timestamp=" + _0x4ae275 + "&key=" + _0x594e6a;
+                      }
+                    }
+                  }
                 }
               }
             }
           }
         }
-      };
+      }
     }
   }
-  function d(ao, ap) {
+  const _0x5638d9 = _0x360902(_0xc962e9);
+  if (_0x2f939a == false) {
     {
-      if (ao) {
-        {
-          if ("string" == typeof ao) {
-            return f(ao, ap);
-          }
-          var aq = {}.toString.call(ao).slice(8, -1);
-          "Object" === aq && ao.constructor && (aq = ao.constructor.name);
-          return "Map" === aq || "Set" === aq ? Array.from(ao) : "Arguments" === aq || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(aq) ? f(ao, ap) : undefined;
-        }
-      }
+      return _0x5638d9;
     }
-  }
-  function f(ao, ap) {
+  } else {
     {
-      (null == ap || ap > ao.length) && (ap = ao.length);
-      for (var aq = 0, ar = Array(ap); aq < ap; aq++) {
-        ar[aq] = ao[aq];
-      }
-      return ar;
+      return _0x5638d9.toUpperCase();
     }
   }
-  function g() {
-    "use strict";
-
-    g = function () {
-      {
-        return aq;
+}
+function _0x1d1fc5(_0x10f767) {
+  var _0x25667c = String.fromCharCode(_0x10f767.charCodeAt(0) + _0x10f767.length);
+  for (var _0x53252d = 1; _0x53252d < _0x10f767.length; _0x53252d++) {
+    {
+      _0x25667c += String.fromCharCode(_0x10f767.charCodeAt(_0x53252d) + _0x10f767.charCodeAt(_0x53252d - 1));
+    }
+  }
+  return escape(_0x25667c);
+}
+function _0x518264(_0x164338) {
+  _0x164338 = unescape(_0x164338);
+  var _0x1b8af4 = String.fromCharCode(_0x164338.charCodeAt(0) - _0x164338.length);
+  for (var _0x207dab = 1; _0x207dab < _0x164338.length; _0x207dab++) {
+    {
+      _0x1b8af4 += String.fromCharCode(_0x164338.charCodeAt(_0x207dab) - _0x1b8af4.charCodeAt(_0x207dab - 1));
+    }
+  }
+  return _0x1b8af4;
+}
+function _0x122eb9(_0x4c4663, _0x20aac5) {
+  switch (arguments.length) {
+    case 1:
+      return parseInt(Math.random() * _0x4c4663 + 1);
+      break;
+    case 2:
+      return parseInt(Math.random() * (_0x20aac5 - _0x4c4663 + 1) + _0x4c4663);
+      break;
+    default:
+      return 0;
+      break;
+  }
+}
+function _0x397e6c() {
+  if (_0x25e167 == 1) {
+    {
+      _0x567238.msg(_0x567238.name, "", _0x567238.message);
+    }
+  }
+}
+async function _0x4852b9(_0x5dbecf) {
+  if (_0x25e167 == 1) {
+    {
+      if (_0x567238.isNode()) {
+        {
+          await _0x13263b.sendNotify(_0x567238.name, _0x5dbecf);
+        }
+      } else {
+        {
+          _0x567238.msg(_0x567238.name, "", _0x5dbecf);
+        }
       }
-    };
-    var ap;
-    var aq = {
-      wrap: az,
-      isGeneratorFunction: function (aY) {
+    }
+  } else {
+    {
+      _0x567238.log(_0x5dbecf);
+    }
+  }
+}
+function _0x2f7f27(_0x2a340e, _0x4ea5c2) {
+  _0x4ea5c2 = _0x4ea5c2 || "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let _0x1788d6 = "";
+  for (let _0x55995c = 0; _0x55995c < _0x2a340e; _0x55995c++) {
+    {
+      let _0x593d18 = Math.floor(Math.random() * _0x4ea5c2.length);
+      _0x1788d6 += _0x4ea5c2.substring(_0x593d18, _0x593d18 + 1);
+    }
+  }
+  return _0x1788d6;
+}
+function _0x590350(_0xb00ff4) {
+  var _0x508953 = 8;
+  var _0x15847b = 0;
+  function _0x38e539(_0x7a1b81, _0x27d14a) {
+    {
+      var _0x13e4ed = (_0x7a1b81 & 65535) + (_0x27d14a & 65535);
+      var _0x33b71e = (_0x7a1b81 >> 16) + (_0x27d14a >> 16) + (_0x13e4ed >> 16);
+      return _0x33b71e << 16 | _0x13e4ed & 65535;
+    }
+  }
+  function _0x17b396(_0x4fb346, _0x469f09) {
+    {
+      return _0x4fb346 >>> _0x469f09 | _0x4fb346 << 32 - _0x469f09;
+    }
+  }
+  function _0x58557b(_0x1ec5bb, _0xf6a68e) {
+    {
+      return _0x1ec5bb >>> _0xf6a68e;
+    }
+  }
+  function _0x517151(_0xb17e8d, _0x1c918f, _0x5325fc) {
+    {
+      return _0xb17e8d & _0x1c918f ^ ~_0xb17e8d & _0x5325fc;
+    }
+  }
+  function _0x2ae248(_0x3d3e50, _0xfbc2fc, _0x2f1410) {
+    {
+      return _0x3d3e50 & _0xfbc2fc ^ _0x3d3e50 & _0x2f1410 ^ _0xfbc2fc & _0x2f1410;
+    }
+  }
+  function _0x3e9216(_0x5973a3) {
+    {
+      return _0x17b396(_0x5973a3, 2) ^ _0x17b396(_0x5973a3, 13) ^ _0x17b396(_0x5973a3, 22);
+    }
+  }
+  function _0x516a5c(_0x42cc9b) {
+    {
+      return _0x17b396(_0x42cc9b, 6) ^ _0x17b396(_0x42cc9b, 11) ^ _0x17b396(_0x42cc9b, 25);
+    }
+  }
+  function _0xa1d94d(_0x12453d) {
+    {
+      return _0x17b396(_0x12453d, 7) ^ _0x17b396(_0x12453d, 18) ^ _0x58557b(_0x12453d, 3);
+    }
+  }
+  function _0x1b2285(_0x590765) {
+    {
+      return _0x17b396(_0x590765, 17) ^ _0x17b396(_0x590765, 19) ^ _0x58557b(_0x590765, 10);
+    }
+  }
+  function _0x25b519(_0x569e1e, _0x143d05) {
+    {
+      var _0x2b2d28 = new Array(1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221, 3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580, 3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882, 2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411, 3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452, 2361852424, 2428436474, 2756734187, 3204031479, 3329325298);
+      var _0x4d7aff = new Array(1779033703, 3144134277, 1013904242, 2773480762, 1359893119, 2600822924, 528734635, 1541459225);
+      var _0x3e424d = new Array(64);
+      var _0x37e54c;
+      var _0x53ae76;
+      var _0x1507cd;
+      var _0x2bfc40;
+      var _0x3266eb;
+      var _0x475da1;
+      var _0x484aeb;
+      var _0x26213a;
+      var _0x3cea2f;
+      var _0x26e910;
+      var _0x97c8f9;
+      var _0x1250e3;
+      _0x569e1e[_0x143d05 >> 5] |= 128 << 24 - _0x143d05 % 32;
+      _0x569e1e[(_0x143d05 + 64 >> 9 << 4) + 15] = _0x143d05;
+      for (var _0x40f41d = 0; _0x40f41d < _0x569e1e.length; _0x40f41d += 16) {
         {
-          var b0 = "function" == typeof aY && aY.constructor;
-          return !!b0 && (b0 === aH || "GeneratorFunction" === (b0.displayName || b0.name));
-        }
-      },
-      mark: function (aY) {
-        {
-          Object.setPrototypeOf ? Object.setPrototypeOf(aY, aI) : (aY.__proto__ = aI, ay(aY, ax, "GeneratorFunction"));
-          aY.prototype = Object.create(aM);
-          return aY;
-        }
-      },
-      awrap: function (aY) {
-        {
-          var b0 = {
-            __await: aY
-          };
-          return b0;
-        }
-      },
-      AsyncIterator: aO,
-      async: function (aY, aZ, b0, b1, b2) {
-        {
-          undefined === b2 && (b2 = Promise);
-          var b3 = new aO(az(aY, aZ, b0, b1), b2);
-          return aq.isGeneratorFunction(aZ) ? b3 : b3.next().then(function (b5) {
+          _0x37e54c = _0x4d7aff[0];
+          _0x53ae76 = _0x4d7aff[1];
+          _0x1507cd = _0x4d7aff[2];
+          _0x2bfc40 = _0x4d7aff[3];
+          _0x3266eb = _0x4d7aff[4];
+          _0x475da1 = _0x4d7aff[5];
+          _0x484aeb = _0x4d7aff[6];
+          _0x26213a = _0x4d7aff[7];
+          for (var _0x4b7e4f = 0; _0x4b7e4f < 64; _0x4b7e4f++) {
             {
-              return b5.done ? b5.value : b3.next();
+              if (_0x4b7e4f < 16) {
+                _0x3e424d[_0x4b7e4f] = _0x569e1e[_0x4b7e4f + _0x40f41d];
+              } else {
+                _0x3e424d[_0x4b7e4f] = _0x38e539(_0x38e539(_0x38e539(_0x1b2285(_0x3e424d[_0x4b7e4f - 2]), _0x3e424d[_0x4b7e4f - 7]), _0xa1d94d(_0x3e424d[_0x4b7e4f - 15])), _0x3e424d[_0x4b7e4f - 16]);
+              }
+              _0x97c8f9 = _0x38e539(_0x38e539(_0x38e539(_0x38e539(_0x26213a, _0x516a5c(_0x3266eb)), _0x517151(_0x3266eb, _0x475da1, _0x484aeb)), _0x2b2d28[_0x4b7e4f]), _0x3e424d[_0x4b7e4f]);
+              _0x1250e3 = _0x38e539(_0x3e9216(_0x37e54c), _0x2ae248(_0x37e54c, _0x53ae76, _0x1507cd));
+              _0x26213a = _0x484aeb;
+              _0x484aeb = _0x475da1;
+              _0x475da1 = _0x3266eb;
+              _0x3266eb = _0x38e539(_0x2bfc40, _0x97c8f9);
+              _0x2bfc40 = _0x1507cd;
+              _0x1507cd = _0x53ae76;
+              _0x53ae76 = _0x37e54c;
+              _0x37e54c = _0x38e539(_0x97c8f9, _0x1250e3);
             }
-          });
+          }
+          _0x4d7aff[0] = _0x38e539(_0x37e54c, _0x4d7aff[0]);
+          _0x4d7aff[1] = _0x38e539(_0x53ae76, _0x4d7aff[1]);
+          _0x4d7aff[2] = _0x38e539(_0x1507cd, _0x4d7aff[2]);
+          _0x4d7aff[3] = _0x38e539(_0x2bfc40, _0x4d7aff[3]);
+          _0x4d7aff[4] = _0x38e539(_0x3266eb, _0x4d7aff[4]);
+          _0x4d7aff[5] = _0x38e539(_0x475da1, _0x4d7aff[5]);
+          _0x4d7aff[6] = _0x38e539(_0x484aeb, _0x4d7aff[6]);
+          _0x4d7aff[7] = _0x38e539(_0x26213a, _0x4d7aff[7]);
         }
       }
-    };
-    var ar = Object.prototype;
-    var as = ar.hasOwnProperty;
-    var at = Object.defineProperty || function (aV, aW, aX) {
-      {
-        aV[aW] = aX.value;
-      }
-    };
-    var au = "function" == typeof Symbol ? Symbol : {};
-    var av = au.iterator || "@@iterator";
-    var aw = au.asyncIterator || "@@asyncIterator";
-    var ax = au.toStringTag || "@@toStringTag";
-    function ay(aV, aW, aX) {
-      {
-        var b0 = {
-          value: aX,
-          enumerable: true,
-          configurable: true,
-          writable: true
-        };
-        Object.defineProperty(aV, aW, b0);
-        return aV[aW];
-      }
+      return _0x4d7aff;
     }
-    try {
-      {
-        ay({}, "");
-      }
-    } catch (aW) {
-      {
-        ay = function (aY, aZ, b0) {
-          {
-            return aY[aZ] = b0;
-          }
-        };
-      }
-    }
-    function az(aY, aZ, b0, b1) {
-      {
-        var b2 = aZ && aZ.prototype instanceof aG ? aZ : aG;
-        var b3 = Object.create(b2.prototype);
-        var b4 = new aT(b1 || []);
-        at(b3, "_invoke", {
-          value: aP(aY, b0, b4)
-        });
-        return b3;
-      }
-    }
-    function aA(aY, aZ, b0) {
-      {
-        try {
-          {
-            return {
-              type: "normal",
-              arg: aY.call(aZ, b0)
-            };
-          }
-        } catch (b4) {
-          {
-            var b2 = {
-              type: "throw",
-              arg: b4
-            };
-            return b2;
-          }
+  }
+  function _0x4ed69b(_0xde132d) {
+    {
+      var _0x3642e5 = Array();
+      var _0x546811 = (1 << _0x508953) - 1;
+      for (var _0x19d258 = 0; _0x19d258 < _0xde132d.length * _0x508953; _0x19d258 += _0x508953) {
+        {
+          _0x3642e5[_0x19d258 >> 5] |= (_0xde132d.charCodeAt(_0x19d258 / _0x508953) & _0x546811) << 24 - _0x19d258 % 32;
         }
       }
+      return _0x3642e5;
     }
-    var aB = "suspendedStart";
-    var aC = "suspendedYield";
-    var aD = "executing";
-    var aE = "completed";
-    var aF = {};
-    function aG() {}
-    function aH() {}
-    function aI() {}
-    var aJ = {};
-    ay(aJ, av, function () {
-      return this;
-    });
-    var aK = Object.getPrototypeOf;
-    var aL = aK && aK(aK(aU([])));
-    aL && aL !== ar && as.call(aL, av) && (aJ = aL);
-    aI.prototype = aG.prototype = Object.create(aJ);
-    var aM = aI.prototype;
-    function aN(aY) {
-      {
-        ["next", "throw", "return"].forEach(function (b1) {
-          {
-            ay(aY, b1, function (b2) {
+  }
+  function _0x5ee5a5(_0x380abd) {
+    {
+      _0x380abd = _0x380abd.replace(/\r\n/g, "\n");
+      var _0x31e460 = "";
+      for (var _0x200748 = 0; _0x200748 < _0x380abd.length; _0x200748++) {
+        {
+          var _0x5e5f4e = _0x380abd.charCodeAt(_0x200748);
+          if (_0x5e5f4e < 128) {
+            {
+              _0x31e460 += String.fromCharCode(_0x5e5f4e);
+            }
+          } else {
+            if (_0x5e5f4e > 127 && _0x5e5f4e < 2048) {
               {
-                return this._invoke(b1, b2);
+                _0x31e460 += String.fromCharCode(_0x5e5f4e >> 6 | 192);
+                _0x31e460 += String.fromCharCode(_0x5e5f4e & 63 | 128);
+              }
+            } else {
+              {
+                _0x31e460 += String.fromCharCode(_0x5e5f4e >> 12 | 224);
+                _0x31e460 += String.fromCharCode(_0x5e5f4e >> 6 & 63 | 128);
+                _0x31e460 += String.fromCharCode(_0x5e5f4e & 63 | 128);
+              }
+            }
+          }
+        }
+      }
+      return _0x31e460;
+    }
+  }
+  function _0x112187(_0x528cd5) {
+    {
+      var _0x3ab847 = _0x15847b ? "0123456789ABCDEF" : "0123456789abcdef";
+      var _0x4a32ab = "";
+      for (var _0x50a72c = 0; _0x50a72c < _0x528cd5.length * 4; _0x50a72c++) {
+        {
+          _0x4a32ab += _0x3ab847.charAt(_0x528cd5[_0x50a72c >> 2] >> (3 - _0x50a72c % 4) * 8 + 4 & 15) + _0x3ab847.charAt(_0x528cd5[_0x50a72c >> 2] >> (3 - _0x50a72c % 4) * 8 & 15);
+        }
+      }
+      return _0x4a32ab;
+    }
+  }
+  _0xb00ff4 = _0x5ee5a5(_0xb00ff4);
+  return _0x112187(_0x25b519(_0x4ed69b(_0xb00ff4), _0xb00ff4.length * _0x508953));
+}
+function _0x5d974b(_0x4946a) {
+  function _0x1be3e9(_0x3bea61, _0xd3bc52) {
+    {
+      return _0x3bea61 << _0xd3bc52 | _0x3bea61 >>> 32 - _0xd3bc52;
+    }
+  }
+  function _0x171951(_0x578d1e, _0x229270) {
+    {
+      var _0x360631;
+      var _0x3b94a9;
+      var _0x12193e;
+      var _0x132790;
+      var _0x511832;
+      _0x12193e = 2147483648 & _0x578d1e;
+      _0x132790 = 2147483648 & _0x229270;
+      _0x360631 = 1073741824 & _0x578d1e;
+      _0x3b94a9 = 1073741824 & _0x229270;
+      _0x511832 = (1073741823 & _0x578d1e) + (1073741823 & _0x229270);
+      return _0x360631 & _0x3b94a9 ? 2147483648 ^ _0x511832 ^ _0x12193e ^ _0x132790 : _0x360631 | _0x3b94a9 ? 1073741824 & _0x511832 ? 3221225472 ^ _0x511832 ^ _0x12193e ^ _0x132790 : 1073741824 ^ _0x511832 ^ _0x12193e ^ _0x132790 : _0x511832 ^ _0x12193e ^ _0x132790;
+    }
+  }
+  function _0x13c830(_0xe5265e, _0x11dfb2, _0xd94880) {
+    {
+      return _0xe5265e & _0x11dfb2 | ~_0xe5265e & _0xd94880;
+    }
+  }
+  function _0x2aebec(_0xfca46d, _0x412d48, _0x38c4a8) {
+    {
+      return _0xfca46d & _0x38c4a8 | _0x412d48 & ~_0x38c4a8;
+    }
+  }
+  function _0x33fb20(_0x5d3bd9, _0x2a6d8c, _0x7df7c5) {
+    {
+      return _0x5d3bd9 ^ _0x2a6d8c ^ _0x7df7c5;
+    }
+  }
+  function _0x5f4471(_0x59f4a2, _0x1e2260, _0x194202) {
+    {
+      return _0x1e2260 ^ (_0x59f4a2 | ~_0x194202);
+    }
+  }
+  function _0x160cad(_0x424bdc, _0x4b683c, _0x2f93c6, _0x5284ba, _0x21d0af, _0x4be1ac, _0x408b67) {
+    {
+      _0x424bdc = _0x171951(_0x424bdc, _0x171951(_0x171951(_0x13c830(_0x4b683c, _0x2f93c6, _0x5284ba), _0x21d0af), _0x408b67));
+      return _0x171951(_0x1be3e9(_0x424bdc, _0x4be1ac), _0x4b683c);
+    }
+  }
+  function _0x46429f(_0x52705e, _0x20b89e, _0x3f9cb9, _0x4dbb5f, _0x3614fa, _0x5b65d5, _0x4f3821) {
+    {
+      _0x52705e = _0x171951(_0x52705e, _0x171951(_0x171951(_0x2aebec(_0x20b89e, _0x3f9cb9, _0x4dbb5f), _0x3614fa), _0x4f3821));
+      return _0x171951(_0x1be3e9(_0x52705e, _0x5b65d5), _0x20b89e);
+    }
+  }
+  function _0x33f997(_0x12acf4, _0x1f369c, _0x33a1e0, _0x3c7280, _0x4deb87, _0x226d27, _0x4cee31) {
+    {
+      _0x12acf4 = _0x171951(_0x12acf4, _0x171951(_0x171951(_0x33fb20(_0x1f369c, _0x33a1e0, _0x3c7280), _0x4deb87), _0x4cee31));
+      return _0x171951(_0x1be3e9(_0x12acf4, _0x226d27), _0x1f369c);
+    }
+  }
+  function _0x1bf3fc(_0xaa0267, _0x49487f, _0x20fa98, _0x3ac46a, _0x10d0cc, _0x16da85, _0x2d87aa) {
+    {
+      _0xaa0267 = _0x171951(_0xaa0267, _0x171951(_0x171951(_0x5f4471(_0x49487f, _0x20fa98, _0x3ac46a), _0x10d0cc), _0x2d87aa));
+      return _0x171951(_0x1be3e9(_0xaa0267, _0x16da85), _0x49487f);
+    }
+  }
+  function _0x343f05(_0x9cbf57) {
+    {
+      for (var _0x17f736, _0x203453 = _0x9cbf57.length, _0x57d47b = _0x203453 + 8, _0xbd1e4 = (_0x57d47b - _0x57d47b % 64) / 64, _0x248152 = 16 * (_0xbd1e4 + 1), _0x45bafa = new Array(_0x248152 - 1), _0x2a7f01 = 0, _0x4989c1 = 0; _0x203453 > _0x4989c1;) {
+        _0x17f736 = (_0x4989c1 - _0x4989c1 % 4) / 4;
+        _0x2a7f01 = _0x4989c1 % 4 * 8;
+        _0x45bafa[_0x17f736] = _0x45bafa[_0x17f736] | _0x9cbf57.charCodeAt(_0x4989c1) << _0x2a7f01;
+        _0x4989c1++;
+      }
+      _0x17f736 = (_0x4989c1 - _0x4989c1 % 4) / 4;
+      _0x2a7f01 = _0x4989c1 % 4 * 8;
+      _0x45bafa[_0x17f736] = _0x45bafa[_0x17f736] | 128 << _0x2a7f01;
+      _0x45bafa[_0x248152 - 2] = _0x203453 << 3;
+      _0x45bafa[_0x248152 - 1] = _0x203453 >>> 29;
+      return _0x45bafa;
+    }
+  }
+  function _0x1163d6(_0x2d5d4a) {
+    {
+      var _0x22e53e;
+      var _0x50306c;
+      var _0x36b7ee = "";
+      var _0x22a7df = "";
+      for (_0x50306c = 0; 3 >= _0x50306c; _0x50306c++) {
+        _0x22e53e = _0x2d5d4a >>> 8 * _0x50306c & 255;
+        _0x22a7df = "0" + _0x22e53e.toString(16);
+        _0x36b7ee += _0x22a7df.substr(_0x22a7df.length - 2, 2);
+      }
+      return _0x36b7ee;
+    }
+  }
+  function _0x175565(_0x452158) {
+    {
+      _0x452158 = _0x452158.replace(/\r\n/g, "\n");
+      for (var _0x3ec660 = "", _0x56bcf7 = 0; _0x56bcf7 < _0x452158.length; _0x56bcf7++) {
+        {
+          var _0xf7b33 = _0x452158.charCodeAt(_0x56bcf7);
+          128 > _0xf7b33 ? _0x3ec660 += String.fromCharCode(_0xf7b33) : _0xf7b33 > 127 && 2048 > _0xf7b33 ? (_0x3ec660 += String.fromCharCode(_0xf7b33 >> 6 | 192), _0x3ec660 += String.fromCharCode(63 & _0xf7b33 | 128)) : (_0x3ec660 += String.fromCharCode(_0xf7b33 >> 12 | 224), _0x3ec660 += String.fromCharCode(_0xf7b33 >> 6 & 63 | 128), _0x3ec660 += String.fromCharCode(63 & _0xf7b33 | 128));
+        }
+      }
+      return _0x3ec660;
+    }
+  }
+  var _0x596e67;
+  var _0x32f612;
+  var _0xc36b67;
+  var _0x2381fd;
+  var _0x522a05;
+  var _0x1e0cc7;
+  var _0x44b001;
+  var _0x266ef1;
+  var _0x522b49;
+  var _0x55812b = [];
+  var _0x34ce28 = 7;
+  var _0x1e4d94 = 12;
+  var _0x47f600 = 17;
+  var _0xb43b7c = 22;
+  var _0x55ffd6 = 5;
+  var _0x3271c7 = 9;
+  var _0x1992d3 = 14;
+  var _0x4a3c79 = 20;
+  var _0xe7eb21 = 4;
+  var _0x111a16 = 11;
+  var _0x322921 = 16;
+  var _0x5e6df0 = 23;
+  var _0x5b3065 = 6;
+  var _0x7ceb82 = 10;
+  var _0x568eec = 15;
+  var _0xf40f15 = 21;
+  for (_0x4946a = _0x175565(_0x4946a), _0x55812b = _0x343f05(_0x4946a), _0x1e0cc7 = 1732584193, _0x44b001 = 4023233417, _0x266ef1 = 2562383102, _0x522b49 = 271733878, _0x596e67 = 0; _0x596e67 < _0x55812b.length; _0x596e67 += 16) {
+    _0x32f612 = _0x1e0cc7;
+    _0xc36b67 = _0x44b001;
+    _0x2381fd = _0x266ef1;
+    _0x522a05 = _0x522b49;
+    _0x1e0cc7 = _0x160cad(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 0], _0x34ce28, 3614090360);
+    _0x522b49 = _0x160cad(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 1], _0x1e4d94, 3905402710);
+    _0x266ef1 = _0x160cad(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 2], _0x47f600, 606105819);
+    _0x44b001 = _0x160cad(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 3], _0xb43b7c, 3250441966);
+    _0x1e0cc7 = _0x160cad(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 4], _0x34ce28, 4118548399);
+    _0x522b49 = _0x160cad(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 5], _0x1e4d94, 1200080426);
+    _0x266ef1 = _0x160cad(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 6], _0x47f600, 2821735955);
+    _0x44b001 = _0x160cad(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 7], _0xb43b7c, 4249261313);
+    _0x1e0cc7 = _0x160cad(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 8], _0x34ce28, 1770035416);
+    _0x522b49 = _0x160cad(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 9], _0x1e4d94, 2336552879);
+    _0x266ef1 = _0x160cad(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 10], _0x47f600, 4294925233);
+    _0x44b001 = _0x160cad(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 11], _0xb43b7c, 2304563134);
+    _0x1e0cc7 = _0x160cad(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 12], _0x34ce28, 1804603682);
+    _0x522b49 = _0x160cad(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 13], _0x1e4d94, 4254626195);
+    _0x266ef1 = _0x160cad(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 14], _0x47f600, 2792965006);
+    _0x44b001 = _0x160cad(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 15], _0xb43b7c, 1236535329);
+    _0x1e0cc7 = _0x46429f(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 1], _0x55ffd6, 4129170786);
+    _0x522b49 = _0x46429f(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 6], _0x3271c7, 3225465664);
+    _0x266ef1 = _0x46429f(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 11], _0x1992d3, 643717713);
+    _0x44b001 = _0x46429f(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 0], _0x4a3c79, 3921069994);
+    _0x1e0cc7 = _0x46429f(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 5], _0x55ffd6, 3593408605);
+    _0x522b49 = _0x46429f(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 10], _0x3271c7, 38016083);
+    _0x266ef1 = _0x46429f(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 15], _0x1992d3, 3634488961);
+    _0x44b001 = _0x46429f(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 4], _0x4a3c79, 3889429448);
+    _0x1e0cc7 = _0x46429f(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 9], _0x55ffd6, 568446438);
+    _0x522b49 = _0x46429f(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 14], _0x3271c7, 3275163606);
+    _0x266ef1 = _0x46429f(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 3], _0x1992d3, 4107603335);
+    _0x44b001 = _0x46429f(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 8], _0x4a3c79, 1163531501);
+    _0x1e0cc7 = _0x46429f(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 13], _0x55ffd6, 2850285829);
+    _0x522b49 = _0x46429f(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 2], _0x3271c7, 4243563512);
+    _0x266ef1 = _0x46429f(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 7], _0x1992d3, 1735328473);
+    _0x44b001 = _0x46429f(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 12], _0x4a3c79, 2368359562);
+    _0x1e0cc7 = _0x33f997(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 5], _0xe7eb21, 4294588738);
+    _0x522b49 = _0x33f997(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 8], _0x111a16, 2272392833);
+    _0x266ef1 = _0x33f997(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 11], _0x322921, 1839030562);
+    _0x44b001 = _0x33f997(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 14], _0x5e6df0, 4259657740);
+    _0x1e0cc7 = _0x33f997(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 1], _0xe7eb21, 2763975236);
+    _0x522b49 = _0x33f997(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 4], _0x111a16, 1272893353);
+    _0x266ef1 = _0x33f997(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 7], _0x322921, 4139469664);
+    _0x44b001 = _0x33f997(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 10], _0x5e6df0, 3200236656);
+    _0x1e0cc7 = _0x33f997(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 13], _0xe7eb21, 681279174);
+    _0x522b49 = _0x33f997(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 0], _0x111a16, 3936430074);
+    _0x266ef1 = _0x33f997(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 3], _0x322921, 3572445317);
+    _0x44b001 = _0x33f997(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 6], _0x5e6df0, 76029189);
+    _0x1e0cc7 = _0x33f997(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 9], _0xe7eb21, 3654602809);
+    _0x522b49 = _0x33f997(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 12], _0x111a16, 3873151461);
+    _0x266ef1 = _0x33f997(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 15], _0x322921, 530742520);
+    _0x44b001 = _0x33f997(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 2], _0x5e6df0, 3299628645);
+    _0x1e0cc7 = _0x1bf3fc(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 0], _0x5b3065, 4096336452);
+    _0x522b49 = _0x1bf3fc(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 7], _0x7ceb82, 1126891415);
+    _0x266ef1 = _0x1bf3fc(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 14], _0x568eec, 2878612391);
+    _0x44b001 = _0x1bf3fc(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 5], _0xf40f15, 4237533241);
+    _0x1e0cc7 = _0x1bf3fc(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 12], _0x5b3065, 1700485571);
+    _0x522b49 = _0x1bf3fc(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 3], _0x7ceb82, 2399980690);
+    _0x266ef1 = _0x1bf3fc(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 10], _0x568eec, 4293915773);
+    _0x44b001 = _0x1bf3fc(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 1], _0xf40f15, 2240044497);
+    _0x1e0cc7 = _0x1bf3fc(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 8], _0x5b3065, 1873313359);
+    _0x522b49 = _0x1bf3fc(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 15], _0x7ceb82, 4264355552);
+    _0x266ef1 = _0x1bf3fc(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 6], _0x568eec, 2734768916);
+    _0x44b001 = _0x1bf3fc(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 13], _0xf40f15, 1309151649);
+    _0x1e0cc7 = _0x1bf3fc(_0x1e0cc7, _0x44b001, _0x266ef1, _0x522b49, _0x55812b[_0x596e67 + 4], _0x5b3065, 4149444226);
+    _0x522b49 = _0x1bf3fc(_0x522b49, _0x1e0cc7, _0x44b001, _0x266ef1, _0x55812b[_0x596e67 + 11], _0x7ceb82, 3174756917);
+    _0x266ef1 = _0x1bf3fc(_0x266ef1, _0x522b49, _0x1e0cc7, _0x44b001, _0x55812b[_0x596e67 + 2], _0x568eec, 718787259);
+    _0x44b001 = _0x1bf3fc(_0x44b001, _0x266ef1, _0x522b49, _0x1e0cc7, _0x55812b[_0x596e67 + 9], _0xf40f15, 3951481745);
+    _0x1e0cc7 = _0x171951(_0x1e0cc7, _0x32f612);
+    _0x44b001 = _0x171951(_0x44b001, _0xc36b67);
+    _0x266ef1 = _0x171951(_0x266ef1, _0x2381fd);
+    _0x522b49 = _0x171951(_0x522b49, _0x522a05);
+  }
+  var _0x4cb427 = _0x1163d6(_0x1e0cc7) + _0x1163d6(_0x44b001) + _0x1163d6(_0x266ef1) + _0x1163d6(_0x522b49);
+  return _0x4cb427.toLowerCase();
+}
+function _0x227b11() {
+  var _0x2718a1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+  this.encode = function (_0x1a50ae) {
+    {
+      var _0x287f72 = "";
+      var _0x58d66b;
+      var _0x3899e0;
+      var _0x17a524;
+      var _0x36d6bc;
+      var _0x1382e9;
+      var _0x580128;
+      var _0x5eef05;
+      var _0x76a0b7 = 0;
+      _0x1a50ae = utf8Encode(_0x1a50ae);
+      while (_0x76a0b7 < _0x1a50ae.length) {
+        {
+          _0x58d66b = _0x1a50ae.charCodeAt(_0x76a0b7++);
+          _0x3899e0 = _0x1a50ae.charCodeAt(_0x76a0b7++);
+          _0x17a524 = _0x1a50ae.charCodeAt(_0x76a0b7++);
+          _0x36d6bc = _0x58d66b >> 2;
+          _0x1382e9 = (_0x58d66b & 3) << 4 | _0x3899e0 >> 4;
+          _0x580128 = (_0x3899e0 & 15) << 2 | _0x17a524 >> 6;
+          _0x5eef05 = _0x17a524 & 63;
+          if (isNaN(_0x3899e0)) {
+            {
+              _0x580128 = _0x5eef05 = 64;
+            }
+          } else {
+            if (isNaN(_0x17a524)) {
+              {
+                _0x5eef05 = 64;
+              }
+            }
+          }
+          _0x287f72 = _0x287f72 + _0x2718a1.charAt(_0x36d6bc) + _0x2718a1.charAt(_0x1382e9) + _0x2718a1.charAt(_0x580128) + _0x2718a1.charAt(_0x5eef05);
+        }
+      }
+      return _0x287f72;
+    }
+  };
+  this.decode = function (_0x3de691) {
+    {
+      var _0x9fe269 = "";
+      var _0x792a44;
+      var _0x4f5ee9;
+      var _0x3ac686;
+      var _0x5b155f;
+      var _0x5ab6c2;
+      var _0x377045;
+      var _0xba2886;
+      var _0x35f5be = 0;
+      _0x3de691 = _0x3de691.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+      while (_0x35f5be < _0x3de691.length) {
+        {
+          _0x5b155f = _0x2718a1.indexOf(_0x3de691.charAt(_0x35f5be++));
+          _0x5ab6c2 = _0x2718a1.indexOf(_0x3de691.charAt(_0x35f5be++));
+          _0x377045 = _0x2718a1.indexOf(_0x3de691.charAt(_0x35f5be++));
+          _0xba2886 = _0x2718a1.indexOf(_0x3de691.charAt(_0x35f5be++));
+          _0x792a44 = _0x5b155f << 2 | _0x5ab6c2 >> 4;
+          _0x4f5ee9 = (_0x5ab6c2 & 15) << 4 | _0x377045 >> 2;
+          _0x3ac686 = (_0x377045 & 3) << 6 | _0xba2886;
+          _0x9fe269 = _0x9fe269 + String.fromCharCode(_0x792a44);
+          if (_0x377045 !== 64) {
+            {
+              _0x9fe269 = _0x9fe269 + String.fromCharCode(_0x4f5ee9);
+            }
+          }
+          if (_0xba2886 !== 64) {
+            {
+              _0x9fe269 = _0x9fe269 + String.fromCharCode(_0x3ac686);
+            }
+          }
+        }
+      }
+      _0x9fe269 = utf8Decode(_0x9fe269);
+      return _0x9fe269;
+    }
+  };
+  utf8Encode = function (_0x44a0d1) {
+    {
+      _0x44a0d1 = _0x44a0d1.replace(/\r\n/g, "\n");
+      var _0x4037de = "";
+      for (var _0x1ffe24 = 0; _0x1ffe24 < _0x44a0d1.length; _0x1ffe24++) {
+        {
+          var _0x2c125f = _0x44a0d1.charCodeAt(_0x1ffe24);
+          if (_0x2c125f < 128) {
+            {
+              _0x4037de += String.fromCharCode(_0x2c125f);
+            }
+          } else {
+            if (_0x2c125f > 127 && _0x2c125f < 2048) {
+              {
+                _0x4037de += String.fromCharCode(_0x2c125f >> 6 | 192);
+                _0x4037de += String.fromCharCode(_0x2c125f & 63 | 128);
+              }
+            } else {
+              {
+                _0x4037de += String.fromCharCode(_0x2c125f >> 12 | 224);
+                _0x4037de += String.fromCharCode(_0x2c125f >> 6 & 63 | 128);
+                _0x4037de += String.fromCharCode(_0x2c125f & 63 | 128);
+              }
+            }
+          }
+        }
+      }
+      return _0x4037de;
+    }
+  };
+  utf8Decode = function (_0x390207) {
+    {
+      var _0x113060 = "";
+      var _0x56ce9c = 0;
+      var _0x3e28f2 = 0;
+      var _0x35b6c3 = 0;
+      var _0x549449 = 0;
+      while (_0x56ce9c < _0x390207.length) {
+        {
+          _0x3e28f2 = _0x390207.charCodeAt(_0x56ce9c);
+          if (_0x3e28f2 < 128) {
+            {
+              _0x113060 += String.fromCharCode(_0x3e28f2);
+              _0x56ce9c++;
+            }
+          } else {
+            if (_0x3e28f2 > 191 && _0x3e28f2 < 224) {
+              {
+                _0x35b6c3 = _0x390207.charCodeAt(_0x56ce9c + 1);
+                _0x113060 += String.fromCharCode((_0x3e28f2 & 31) << 6 | _0x35b6c3 & 63);
+                _0x56ce9c += 2;
+              }
+            } else {
+              {
+                _0x35b6c3 = _0x390207.charCodeAt(_0x56ce9c + 1);
+                _0x549449 = _0x390207.charCodeAt(_0x56ce9c + 2);
+                _0x113060 += String.fromCharCode((_0x3e28f2 & 15) << 12 | (_0x35b6c3 & 63) << 6 | _0x549449 & 63);
+                _0x56ce9c += 3;
+              }
+            }
+          }
+        }
+      }
+      return _0x113060;
+    }
+  };
+}
+function _0x360902(_0x28eb10) {
+  function _0x4ab24c(_0x1bbef0, _0x59b429) {
+    {
+      var _0x390428 = _0x1bbef0 << _0x59b429 | _0x1bbef0 >>> 32 - _0x59b429;
+      return _0x390428;
+    }
+  }
+  function _0x464164(_0x2e40bd) {
+    {
+      var _0x4f2b79 = "";
+      var _0x32b8b0;
+      var _0x59b89f;
+      var _0x8b0e3c;
+      for (_0x32b8b0 = 0; _0x32b8b0 <= 6; _0x32b8b0 += 2) {
+        {
+          _0x59b89f = _0x2e40bd >>> _0x32b8b0 * 4 + 4 & 15;
+          _0x8b0e3c = _0x2e40bd >>> _0x32b8b0 * 4 & 15;
+          _0x4f2b79 += _0x59b89f.toString(16) + _0x8b0e3c.toString(16);
+        }
+      }
+      return _0x4f2b79;
+    }
+  }
+  function _0x1d8809(_0x1e1ba4) {
+    {
+      var _0x1dc5ef = "";
+      var _0x5a04c9;
+      var _0x80b582;
+      for (_0x5a04c9 = 7; _0x5a04c9 >= 0; _0x5a04c9--) {
+        {
+          _0x80b582 = _0x1e1ba4 >>> _0x5a04c9 * 4 & 15;
+          _0x1dc5ef += _0x80b582.toString(16);
+        }
+      }
+      return _0x1dc5ef;
+    }
+  }
+  function _0x1888b2(_0x2784f5) {
+    {
+      _0x2784f5 = _0x2784f5.replace(/\r\n/g, "\n");
+      var _0x406ecb = "";
+      for (var _0x164517 = 0; _0x164517 < _0x2784f5.length; _0x164517++) {
+        {
+          var _0x1aca24 = _0x2784f5.charCodeAt(_0x164517);
+          if (_0x1aca24 < 128) {
+            {
+              _0x406ecb += String.fromCharCode(_0x1aca24);
+            }
+          } else {
+            if (_0x1aca24 > 127 && _0x1aca24 < 2048) {
+              {
+                _0x406ecb += String.fromCharCode(_0x1aca24 >> 6 | 192);
+                _0x406ecb += String.fromCharCode(_0x1aca24 & 63 | 128);
+              }
+            } else {
+              {
+                _0x406ecb += String.fromCharCode(_0x1aca24 >> 12 | 224);
+                _0x406ecb += String.fromCharCode(_0x1aca24 >> 6 & 63 | 128);
+                _0x406ecb += String.fromCharCode(_0x1aca24 & 63 | 128);
+              }
+            }
+          }
+        }
+      }
+      return _0x406ecb;
+    }
+  }
+  var _0x5cc787;
+  var _0x27c4d5;
+  var _0x3a67f9;
+  var _0x2c839f = new Array(80);
+  var _0x2baa3e = 1732584193;
+  var _0x4de868 = 4023233417;
+  var _0x2c8f91 = 2562383102;
+  var _0x5f2973 = 271733878;
+  var _0x36f3c4 = 3285377520;
+  var _0x339c7e;
+  var _0x47a15b;
+  var _0x5f1a18;
+  var _0xecdcc7;
+  var _0x4d9165;
+  var _0x5d46c5;
+  _0x28eb10 = _0x1888b2(_0x28eb10);
+  var _0x567502 = _0x28eb10.length;
+  var _0x22f2d5 = new Array();
+  for (_0x27c4d5 = 0; _0x27c4d5 < _0x567502 - 3; _0x27c4d5 += 4) {
+    {
+      _0x3a67f9 = _0x28eb10.charCodeAt(_0x27c4d5) << 24 | _0x28eb10.charCodeAt(_0x27c4d5 + 1) << 16 | _0x28eb10.charCodeAt(_0x27c4d5 + 2) << 8 | _0x28eb10.charCodeAt(_0x27c4d5 + 3);
+      _0x22f2d5.push(_0x3a67f9);
+    }
+  }
+  switch (_0x567502 % 4) {
+    case 0:
+      _0x27c4d5 = 2147483648;
+      break;
+    case 1:
+      _0x27c4d5 = _0x28eb10.charCodeAt(_0x567502 - 1) << 24 | 8388608;
+      break;
+    case 2:
+      _0x27c4d5 = _0x28eb10.charCodeAt(_0x567502 - 2) << 24 | _0x28eb10.charCodeAt(_0x567502 - 1) << 16 | 32768;
+      break;
+    case 3:
+      _0x27c4d5 = _0x28eb10.charCodeAt(_0x567502 - 3) << 24 | _0x28eb10.charCodeAt(_0x567502 - 2) << 16 | _0x28eb10.charCodeAt(_0x567502 - 1) << 8 | 128;
+      break;
+  }
+  _0x22f2d5.push(_0x27c4d5);
+  while (_0x22f2d5.length % 16 != 14) {
+    _0x22f2d5.push(0);
+  }
+  _0x22f2d5.push(_0x567502 >>> 29);
+  _0x22f2d5.push(_0x567502 << 3 & 4294967295);
+  for (_0x5cc787 = 0; _0x5cc787 < _0x22f2d5.length; _0x5cc787 += 16) {
+    {
+      for (_0x27c4d5 = 0; _0x27c4d5 < 16; _0x27c4d5++) {
+        _0x2c839f[_0x27c4d5] = _0x22f2d5[_0x5cc787 + _0x27c4d5];
+      }
+      for (_0x27c4d5 = 16; _0x27c4d5 <= 79; _0x27c4d5++) {
+        _0x2c839f[_0x27c4d5] = _0x4ab24c(_0x2c839f[_0x27c4d5 - 3] ^ _0x2c839f[_0x27c4d5 - 8] ^ _0x2c839f[_0x27c4d5 - 14] ^ _0x2c839f[_0x27c4d5 - 16], 1);
+      }
+      _0x339c7e = _0x2baa3e;
+      _0x47a15b = _0x4de868;
+      _0x5f1a18 = _0x2c8f91;
+      _0xecdcc7 = _0x5f2973;
+      _0x4d9165 = _0x36f3c4;
+      for (_0x27c4d5 = 0; _0x27c4d5 <= 19; _0x27c4d5++) {
+        {
+          _0x1b0e95 = _0x4ab24c(_0x339c7e, 5) + (_0x47a15b & _0x5f1a18 | ~_0x47a15b & _0xecdcc7) + _0x4d9165 + _0x2c839f[_0x27c4d5] + 1518500249 & 4294967295;
+          _0x4d9165 = _0xecdcc7;
+          _0xecdcc7 = _0x5f1a18;
+          _0x5f1a18 = _0x4ab24c(_0x47a15b, 30);
+          _0x47a15b = _0x339c7e;
+          _0x339c7e = _0x1b0e95;
+        }
+      }
+      for (_0x27c4d5 = 20; _0x27c4d5 <= 39; _0x27c4d5++) {
+        {
+          _0x1b0e95 = _0x4ab24c(_0x339c7e, 5) + (_0x47a15b ^ _0x5f1a18 ^ _0xecdcc7) + _0x4d9165 + _0x2c839f[_0x27c4d5] + 1859775393 & 4294967295;
+          _0x4d9165 = _0xecdcc7;
+          _0xecdcc7 = _0x5f1a18;
+          _0x5f1a18 = _0x4ab24c(_0x47a15b, 30);
+          _0x47a15b = _0x339c7e;
+          _0x339c7e = _0x1b0e95;
+        }
+      }
+      for (_0x27c4d5 = 40; _0x27c4d5 <= 59; _0x27c4d5++) {
+        {
+          _0x1b0e95 = _0x4ab24c(_0x339c7e, 5) + (_0x47a15b & _0x5f1a18 | _0x47a15b & _0xecdcc7 | _0x5f1a18 & _0xecdcc7) + _0x4d9165 + _0x2c839f[_0x27c4d5] + 2400959708 & 4294967295;
+          _0x4d9165 = _0xecdcc7;
+          _0xecdcc7 = _0x5f1a18;
+          _0x5f1a18 = _0x4ab24c(_0x47a15b, 30);
+          _0x47a15b = _0x339c7e;
+          _0x339c7e = _0x1b0e95;
+        }
+      }
+      for (_0x27c4d5 = 60; _0x27c4d5 <= 79; _0x27c4d5++) {
+        {
+          _0x1b0e95 = _0x4ab24c(_0x339c7e, 5) + (_0x47a15b ^ _0x5f1a18 ^ _0xecdcc7) + _0x4d9165 + _0x2c839f[_0x27c4d5] + 3395469782 & 4294967295;
+          _0x4d9165 = _0xecdcc7;
+          _0xecdcc7 = _0x5f1a18;
+          _0x5f1a18 = _0x4ab24c(_0x47a15b, 30);
+          _0x47a15b = _0x339c7e;
+          _0x339c7e = _0x1b0e95;
+        }
+      }
+      _0x2baa3e = _0x2baa3e + _0x339c7e & 4294967295;
+      _0x4de868 = _0x4de868 + _0x47a15b & 4294967295;
+      _0x2c8f91 = _0x2c8f91 + _0x5f1a18 & 4294967295;
+      _0x5f2973 = _0x5f2973 + _0xecdcc7 & 4294967295;
+      _0x36f3c4 = _0x36f3c4 + _0x4d9165 & 4294967295;
+    }
+  }
+  var _0x1b0e95 = _0x1d8809(_0x2baa3e) + _0x1d8809(_0x4de868) + _0x1d8809(_0x2c8f91) + _0x1d8809(_0x5f2973) + _0x1d8809(_0x36f3c4);
+  return _0x1b0e95.toLowerCase();
+}
+function _0x487ca9(_0x2c8fc7, _0x4e00f5) {
+  class _0x2d3f6e {
+    constructor(_0x575c4f) {
+      {
+        this.env = _0x575c4f;
+      }
+    }
+    send(_0x39eadf, _0xe509e1 = "GET") {
+      {
+        _0x39eadf = typeof _0x39eadf === "string" ? {
+          url: _0x39eadf
+        } : _0x39eadf;
+        let _0x17c5a2 = this.get;
+        if (_0xe509e1 === "POST") {
+          {
+            _0x17c5a2 = this.post;
+          }
+        }
+        return new Promise((_0x5a3920, _0x10e1b9) => {
+          {
+            _0x17c5a2.call(this, _0x39eadf, (_0x258b3b, _0x3c6f67, _0x50d530) => {
+              {
+                if (_0x258b3b) {
+                  _0x10e1b9(_0x258b3b);
+                } else {
+                  _0x5a3920(_0x3c6f67);
+                }
               }
             });
           }
         });
       }
     }
-    function aO(aY, aZ) {
+    get(_0x274c16) {
       {
-        function b2(b3, b4, b5, b6) {
-          {
-            var b8 = aA(aY[b3], aY, b4);
-            if ("throw" !== b8.type) {
-              {
-                var b9 = b8.arg;
-                var ba = b9.value;
-                return ba && "object" == b(ba) && as.call(ba, "__await") ? aZ.resolve(ba.__await).then(function (bc) {
-                  {
-                    b2("next", bc, b5, b6);
-                  }
-                }, function (bc) {
-                  {
-                    b2("throw", bc, b5, b6);
-                  }
-                }) : aZ.resolve(ba).then(function (bc) {
-                  {
-                    b9.value = bc;
-                    b5(b9);
-                  }
-                }, function (bc) {
-                  {
-                    return b2("throw", bc, b5, b6);
-                  }
-                });
-              }
-            }
-            b6(b8.arg);
-          }
-        }
-        var b1;
-        at(this, "_invoke", {
-          value: function (b3, b4) {
-            {
-              function b7() {
-                {
-                  return new aZ(function (ba, bb) {
-                    {
-                      b2(b3, b4, ba, bb);
-                    }
-                  });
-                }
-              }
-              return b1 = b1 ? b1.then(b7, b7) : b7();
-            }
-          }
-        });
+        return this.send.call(this.env, _0x274c16);
       }
     }
-    function aP(aY, aZ, b0) {
+    post(_0x49e7dd) {
       {
-        var b2 = aB;
-        return function (b3, b4) {
-          {
-            if (b2 === aD) {
-              throw Error("Generator is already running");
-            }
-            if (b2 === aE) {
-              {
-                if ("throw" === b3) {
-                  throw b4;
-                }
-                var b6 = {
-                  value: ap,
-                  done: true
-                };
-                return b6;
-              }
-            }
-            for (b0.method = b3, b0.arg = b4;;) {
-              {
-                var b7 = b0.delegate;
-                if (b7) {
-                  {
-                    var b8 = aQ(b7, b0);
-                    if (b8) {
-                      if (b8 === aF) {
-                        continue;
-                      }
-                      return b8;
-                    }
-                  }
-                }
-                if ("next" === b0.method) {
-                  b0.sent = b0._sent = b0.arg;
-                } else {
-                  if ("throw" === b0.method) {
-                    {
-                      if (b2 === aB) {
-                        throw b2 = aE, b0.arg;
-                      }
-                      b0.dispatchException(b0.arg);
-                    }
-                  } else {
-                    "return" === b0.method && b0.abrupt("return", b0.arg);
-                  }
-                }
-                b2 = aD;
-                var b9 = aA(aY, aZ, b0);
-                if ("normal" === b9.type) {
-                  {
-                    if (b2 = b0.done ? aE : aC, b9.arg === aF) {
-                      continue;
-                    }
-                    var ba = {
-                      value: b9.arg,
-                      done: b0.done
-                    };
-                    return ba;
-                  }
-                }
-                "throw" === b9.type && (b2 = aE, b0.method = "throw", b0.arg = b9.arg);
-              }
-            }
-          }
-        };
+        return this.send.call(this.env, _0x49e7dd, "POST");
       }
-    }
-    function aQ(aY, aZ) {
-      {
-        var b4 = aZ.method;
-        var b5 = aY.iterator[b4];
-        if (b5 === ap) {
-          aZ.delegate = null;
-          "throw" === b4 && aY.iterator.return && (aZ.method = "return", aZ.arg = ap, aQ(aY, aZ), "throw" === aZ.method) || "return" !== b4 && (aZ.method = "throw", aZ.arg = new TypeError("The iterator does not provide a '" + b4 + "' method"));
-          return aF;
-        }
-        var b2 = aA(b5, aY.iterator, aZ.arg);
-        if ("throw" === b2.type) {
-          aZ.method = "throw";
-          aZ.arg = b2.arg;
-          aZ.delegate = null;
-          return aF;
-        }
-        var b3 = b2.arg;
-        return b3 ? b3.done ? (aZ[aY.resultName] = b3.value, aZ.next = aY.nextLoc, "return" !== aZ.method && (aZ.method = "next", aZ.arg = ap), aZ.delegate = null, aF) : b3 : (aZ.method = "throw", aZ.arg = new TypeError("iterator result is not an object"), aZ.delegate = null, aF);
-      }
-    }
-    function aR(aY) {
-      {
-        var b0 = {
-          tryLoc: aY[0]
-        };
-        1 in aY && (b0.catchLoc = aY[1]);
-        2 in aY && (b0.finallyLoc = aY[2], b0.afterLoc = aY[3]);
-        this.tryEntries.push(b0);
-      }
-    }
-    function aS(aY) {
-      {
-        var b0 = aY.completion || {};
-        b0.type = "normal";
-        delete b0.arg;
-        aY.completion = b0;
-      }
-    }
-    function aT(aY) {
-      {
-        var b1 = {
-          tryLoc: "root"
-        };
-        this.tryEntries = [b1];
-        aY.forEach(aR, this);
-        this.reset(true);
-      }
-    }
-    function aU(aY) {
-      {
-        if (aY || "" === aY) {
-          {
-            var b0 = aY[av];
-            if (b0) {
-              return b0.call(aY);
-            }
-            if ("function" == typeof aY.next) {
-              return aY;
-            }
-            if (!isNaN(aY.length)) {
-              {
-                var b1 = -1;
-                var b2 = function b6() {
-                  {
-                    for (; ++b1 < aY.length;) {
-                      if (as.call(aY, b1)) {
-                        b6.value = aY[b1];
-                        b6.done = false;
-                        return b6;
-                      }
-                    }
-                    b6.value = ap;
-                    b6.done = true;
-                    return b6;
-                  }
-                };
-                return b2.next = b2;
-              }
-            }
-          }
-        }
-        throw new TypeError(b(aY) + " is not iterable");
-      }
-    }
-    aH.prototype = aI;
-    at(aM, "constructor", {
-      value: aI,
-      configurable: true
-    });
-    at(aI, "constructor", {
-      value: aH,
-      configurable: true
-    });
-    aH.displayName = ay(aI, ax, "GeneratorFunction");
-    aN(aO.prototype);
-    ay(aO.prototype, aw, function () {
-      {
-        return this;
-      }
-    });
-    aN(aM);
-    ay(aM, ax, "Generator");
-    ay(aM, av, function () {
-      return this;
-    });
-    ay(aM, "toString", function () {
-      {
-        return "[object Generator]";
-      }
-    });
-    aq.keys = function (aY) {
-      var b0 = Object(aY);
-      var b1 = [];
-      for (var b2 in b0) b1.push(b2);
-      b1.reverse();
-      return function b3() {
-        {
-          for (; b1.length;) {
-            {
-              var b4 = b1.pop();
-              if (b4 in b0) {
-                b3.value = b4;
-                b3.done = false;
-                return b3;
-              }
-            }
-          }
-          b3.done = true;
-          return b3;
-        }
-      };
-    };
-    aq.values = aU;
-    aT.prototype = {
-      constructor: aT,
-      reset: function (aY) {
-        if (this.prev = 0, this.next = 0, this.sent = this._sent = ap, this.done = false, this.delegate = null, this.method = "next", this.arg = ap, this.tryEntries.forEach(aS), !aY) {
-          for (var aZ in this) "t" === aZ.charAt(0) && as.call(this, aZ) && !isNaN(+aZ.slice(1)) && (this[aZ] = ap);
-        }
-      },
-      stop: function () {
-        {
-          this.done = true;
-          var aY = this.tryEntries[0].completion;
-          if ("throw" === aY.type) {
-            throw aY.arg;
-          }
-          return this.rval;
-        }
-      },
-      dispatchException: function (aY) {
-        {
-          if (this.done) {
-            throw aY;
-          }
-          var b0 = this;
-          function b6(b7, b8) {
-            {
-              b3.type = "throw";
-              b3.arg = aY;
-              b0.next = b7;
-              b8 && (b0.method = "next", b0.arg = ap);
-              return !!b8;
-            }
-          }
-          for (var b1 = this.tryEntries.length - 1; b1 >= 0; --b1) {
-            {
-              var b2 = this.tryEntries[b1];
-              var b3 = b2.completion;
-              if ("root" === b2.tryLoc) {
-                return b6("end");
-              }
-              if (b2.tryLoc <= this.prev) {
-                {
-                  var b4 = as.call(b2, "catchLoc");
-                  var b5 = as.call(b2, "finallyLoc");
-                  if (b4 && b5) {
-                    {
-                      if (this.prev < b2.catchLoc) {
-                        return b6(b2.catchLoc, true);
-                      }
-                      if (this.prev < b2.finallyLoc) {
-                        return b6(b2.finallyLoc);
-                      }
-                    }
-                  } else {
-                    if (b4) {
-                      {
-                        if (this.prev < b2.catchLoc) {
-                          return b6(b2.catchLoc, true);
-                        }
-                      }
-                    } else {
-                      {
-                        if (!b5) {
-                          throw Error("try statement without catch or finally");
-                        }
-                        if (this.prev < b2.finallyLoc) {
-                          return b6(b2.finallyLoc);
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      abrupt: function (aY, aZ) {
-        {
-          for (var b0 = this.tryEntries.length - 1; b0 >= 0; --b0) {
-            {
-              var b1 = this.tryEntries[b0];
-              if (b1.tryLoc <= this.prev && as.call(b1, "finallyLoc") && this.prev < b1.finallyLoc) {
-                {
-                  var b2 = b1;
-                  break;
-                }
-              }
-            }
-          }
-          b2 && ("break" === aY || "continue" === aY) && b2.tryLoc <= aZ && aZ <= b2.finallyLoc && (b2 = null);
-          var b3 = b2 ? b2.completion : {};
-          b3.type = aY;
-          b3.arg = aZ;
-          return b2 ? (this.method = "next", this.next = b2.finallyLoc, aF) : this.complete(b3);
-        }
-      },
-      complete: function (aY, aZ) {
-        {
-          if ("throw" === aY.type) {
-            throw aY.arg;
-          }
-          "break" === aY.type || "continue" === aY.type ? this.next = aY.arg : "return" === aY.type ? (this.rval = this.arg = aY.arg, this.method = "return", this.next = "end") : "normal" === aY.type && aZ && (this.next = aZ);
-          return aF;
-        }
-      },
-      finish: function (aY) {
-        {
-          for (var b0 = this.tryEntries.length - 1; b0 >= 0; --b0) {
-            {
-              var b1 = this.tryEntries[b0];
-              if (b1.finallyLoc === aY) {
-                this.complete(b1.completion, b1.afterLoc);
-                aS(b1);
-                return aF;
-              }
-            }
-          }
-        }
-      },
-      catch: function (aY) {
-        {
-          for (var aZ = this.tryEntries.length - 1; aZ >= 0; --aZ) {
-            {
-              var b0 = this.tryEntries[aZ];
-              if (b0.tryLoc === aY) {
-                {
-                  var b1 = b0.completion;
-                  if ("throw" === b1.type) {
-                    {
-                      var b2 = b1.arg;
-                      aS(b0);
-                    }
-                  }
-                  return b2;
-                }
-              }
-            }
-          }
-          throw Error("illegal catch attempt");
-        }
-      },
-      delegateYield: function (aY, aZ, b0) {
-        {
-          this.delegate = {
-            iterator: aU(aY),
-            resultName: aZ,
-            nextLoc: b0
-          };
-          "next" === this.method && (this.arg = ap);
-          return aF;
-        }
-      }
-    };
-    return aq;
-  }
-  function h(ao, ap, aq, ar, as, at, au) {
-    {
-      try {
-        {
-          var aw = ao[at](au);
-          var ax = aw.value;
-        }
-      } catch (aA) {
-        {
-          return void aq(aA);
-        }
-      }
-      aw.done ? ap(ax) : Promise.resolve(ax).then(ar, as);
-    }
-  }
-  function i(ao) {
-    return function () {
-      var ar = this;
-      var as = arguments;
-      return new Promise(function (at, au) {
-        var av = ao.apply(ar, as);
-        function aw(ay) {
-          {
-            h(av, at, au, aw, ax, "next", ay);
-          }
-        }
-        function ax(ay) {
-          {
-            h(av, at, au, aw, ax, "throw", ay);
-          }
-        }
-        aw(undefined);
-      });
-    };
-  }
-  var j = ($.isNode() ? process.env.WangChao : $.getdata("WangChao")) || "";
-  var k = ($.isNode() ? process.env.GHPROXYURL : $.getdata("GHPROXYURL")) || "https://ghfast.top";
-  var l = undefined;
-  var m = "";
-  var n = "64";
-  var o = "";
-  var p = "";
-  var q = "";
-  var r = "";
-  var s = "";
-  var t = "";
-  var u = "";
-  var v = "";
-  var w = "";
-  var x = "";
-  var y = "10019";
-  var z = "";
-  var A = "";
-  var B = "";
-  var C = "";
-  var D = "";
-  var E = "FR*r!isE5W";
-  function F() {
-    {
-      return G.apply(this, arguments);
-    }
-  }
-  function G() {
-    G = i(g().mark(function aq() {
-      {
-        var as;
-        var at;
-        var au;
-        var av;
-        var aw;
-        var ax;
-        var ay;
-        var az;
-        var aA;
-        var aB;
-        var aC;
-        var aD;
-        var aE;
-        var aF;
-        var aG;
-        var aH;
-        var aI;
-        var aJ;
-        var aK;
-        var aL;
-        var aM;
-        var aN;
-        var aO;
-        var aP;
-        var aQ;
-        var aR;
-        var aS;
-        var aT;
-        var aU;
-        var aV;
-        var aW;
-        var aX;
-        var aY;
-        var aZ;
-        var b0;
-        var b1;
-        var b2;
-        var b3;
-        var b4;
-        var b5;
-        var b6;
-        var b7;
-        var b8;
-        var b9;
-        var ba;
-        var bb;
-        var bc;
-        var bd;
-        return g().wrap(function (bf) {
-          {
-            for (;;) {
-              switch (bf.prev = bf.next) {
-                case 0:
-                  if (j) {
-                    {
-                      bf.next = 5;
-                      break;
-                    }
-                  }
-                  console.log("先去boxjs填写账号密码");
-                  bf.next = 4;
-                  return am("先去boxjs填写账号密码");
-                case 4:
-                  return bf.abrupt("return");
-                case 5:
-                  bf.next = 7;
-                  return ai();
-                case 7:
-                  l = bf.sent;
-                  as = j.split(" ");
-                  at = c(as);
-                  bf.prev = 10;
-                  at.s();
-                case 12:
-                  if ((au = at.n()).done) {
-                    {
-                      bf.next = 227;
-                      break;
-                    }
-                  }
-                  av = au.value;
-                  bf.prev = 14;
-                  console.log("随机生成UA");
-                  aw = ag();
-                  o = aw.ua;
-                  p = aw.commonUa;
-                  q = aw.uuid;
-                  console.log(o);
-                  console.log(p);
-                  u = av.split("&")[0];
-                  v = av.split("&")[1];
-                  w = av.split("&")[2];
-                  x = av.split("&")[3] || u;
-                  console.log("用户：".concat(u, "开始任务"));
-                  console.log("获取sessionId");
-                  bf.next = 30;
-                  return N("/api/account/init");
-                case 30:
-                  ax = bf.sent;
-                  z = ax.data.session.id;
-                  console.log(z);
-                  console.log("获取signature_key");
-                  bf.next = 36;
-                  return H("/web/init?client_id=".concat(y));
-                case 36:
-                  ay = bf.sent;
-                  m = ay.data.client.signature_key;
-                  console.log(m);
-                  console.log("获取code");
-                  bf.next = 42;
-                  return J("/web/oauth/credential_auth");
-                case 42:
-                  if (az = bf.sent, az.data) {
-                    {
-                      bf.next = 46;
-                      break;
-                    }
-                  }
-                  console.log(az.message);
-                  return bf.abrupt("continue", 225);
-                case 46:
-                  aA = az.data.authorization_code.code;
-                  console.log(aA);
-                  console.log("登录");
-                  bf.next = 51;
-                  return N("/api/zbtxz/login", "check_token=&code=".concat(aA, "&token=&type=-1&union_id="));
-                case 51:
-                  aB = bf.sent;
-                  console.log("登录成功");
-                  t = aB.data.session.account_id;
-                  z = aB.data.session.id;
-                  bf.next = 57;
-                  return L("/api/app_feature_switch/list");
-                case 57:
-                  aC = bf.sent;
-                  console.log("进入app：".concat(aC.message));
-                  console.log("————————————");
-                  console.log("每日签到");
-                  bf.next = 63;
-                  return R("/auth/userLogin", {
-                    accountId: t,
-                    sessionId: z,
-                    q: "bcuABCdvYzEJodimBMvIjKjDQ5CiVGO2yL2Tm66bWYU=",
-                    tenantCode: "xsb_wangchao"
-                  });
-                case 63:
-                  aD = bf.sent;
-                  A = aD.data.token;
-                  bf.next = 67;
-                  return P("/activity/signin?deviceId=".concat(q, "&sessionId=").concat(z));
-                case 67:
-                  aE = bf.sent;
-                  console.log("签到结果：".concat(aE.message));
-                  bf.next = 71;
-                  return P("/activity/getFixSigninInfo");
-                case 71:
-                  if (aF = bf.sent, !(aF.data.fixSigninDate.length > 0)) {
-                    {
-                      bf.next = 81;
-                      break;
-                    }
-                  }
-                  aG = "";
-                  aH = c(aF.data.fixSigninDate);
-                  try {
-                    {
-                      for (aH.s(); !(aI = aH.n()).done;) {
-                        aJ = aI.value;
-                        aG += aJ + ",";
-                      }
-                    }
-                  } catch (bn) {
-                    {
-                      aH.e(bn);
-                    }
-                  } finally {
-                    {
-                      aH.f();
-                    }
-                  }
-                  aG = aG.substring(0, aG.length - 1);
-                  bf.next = 79;
-                  return P("/activity/fixSignin?deviceId=".concat(q, "&sessionId=").concat(z, "&fixSigninDate=").concat(aG));
-                case 79:
-                  aK = bf.sent;
-                  console.log("补签结果：".concat(aK.message));
-                case 81:
-                  bf.next = 83;
-                  return P("/activity/getUserActivityInfo?startTime=2025-03-15&endTime=2029-03-31&deviceId=".concat(q, "&ytoken="));
-                case 83:
-                  aL = bf.sent;
-                  aM = c(aL.data.h5ActivityExtraRewardList);
-                  bf.prev = 85;
-                  aM.s();
-                case 87:
-                  if ((aN = aM.n()).done) {
-                    {
-                      bf.next = 150;
-                      break;
-                    }
-                  }
-                  if (aO = aN.value, "已完成" == aO.completionDegree) {
-                    {
-                      bf.next = 91;
-                      break;
-                    }
-                  }
-                  return bf.abrupt("continue", 148);
-                case 91:
-                  bf.next = 93;
-                  return P("/activity/getLotteryLink?rewardId=".concat(aO.rewardId, "&type=").concat(aO.signinType));
-                case 93:
-                  if (aP = bf.sent, aP.data) {
-                    {
-                      bf.next = 98;
-                      break;
-                    }
-                  }
-                  bf.next = 97;
-                  return P("/activity/getLotteryLink?rewardId=".concat(aO.rewardId, "&type=2"));
-                case 97:
-                  aP = bf.sent;
-                case 98:
-                  if (aP.data) {
-                    bf.next = 100;
-                    break;
-                  }
-                  return bf.abrupt("continue", 148);
-                case 100:
-                  bf.next = 102;
-                  return V("/api/auth/userLogin", {
-                    accountId: t,
-                    sessionId: z,
-                    q: decodeURIComponent(aP.data.split("q=")[1]),
-                    tenantCode: "xsb_wangchao"
-                  });
-                case 102:
-                  aQ = bf.sent;
-                  B = aQ.data.token;
-                  aR = aQ.data.thirdId;
-                  bf.next = 107;
-                  return T("/activity/lottery/frontPageNum?activityId=".concat(aR));
-                case 107:
-                  aS = bf.sent;
-                  console.log("抽奖id：".concat(aR, " 剩余抽奖次数：").concat(aS.data.remainPrizeNum));
-                  aT = 0;
-                case 110:
-                  if (!(aT < aS.data.remainPrizeNum)) {
-                    {
-                      bf.next = 118;
-                      break;
-                    }
-                  }
-                  var bh = {
-                    activityId: aR,
-                    clientId: q
-                  };
-                  bf.next = 113;
-                  return V("/h5/activity/lottery/userActivityLottery", bh);
-                case 113:
-                  aU = bf.sent;
-                  1 == aU.data.isPrize ? (console.log("抽奖获得：".concat(aU.data.prizeName)), D += "用户：".concat(u, " 抽奖获得：").concat(aU.data.prizeName, "\n")) : 0 == aU.data.isPrize ? console.log("未中奖") : console.log(JSON.stringify(aU));
-                case 115:
-                  aT++;
-                  bf.next = 110;
-                  break;
-                case 118:
-                  bf.next = 120;
-                  return T("/activity/lottery/accountPrizeRecord/userPrizeRecord?activityId=".concat(aR));
-                case 120:
-                  if (aV = bf.sent, aW = /\?u=([^"]*)/, aX = JSON.stringify(aV).match(aW), !aX) {
-                    {
-                      bf.next = 147;
-                      break;
-                    }
-                  }
-                  bf.next = 126;
-                  return Z("/user/auth/userLogin", {
-                    u: decodeURIComponent(aX[1]),
-                    accountId: t,
-                    sessionId: z
-                  });
-                case 126:
-                  aY = bf.sent;
-                  C = aY.data.token;
-                  bf.next = 130;
-                  return X("/redBag/getFundsDetail?fundsChannelType=0");
-                case 130:
-                  if (aZ = bf.sent, aZ.data.account) {
-                    {
-                      bf.next = 136;
-                      break;
-                    }
-                  }
-                  bf.next = 134;
-                  return X("/redBag/saveAliPayAccount?userName=".concat(w, "&account=").concat(x));
-                case 134:
-                  b0 = bf.sent;
-                  console.log("绑定支付宝：".concat(b0.message));
-                case 136:
-                  bf.next = 138;
-                  return X("/redBag/getWalletInfo");
-                case 138:
-                  if (b1 = bf.sent, console.log("钱包余额：".concat(b1.data.aliPayTotalPrice)), !(b1.data.aliPayTotalPrice > 0)) {
-                    {
-                      bf.next = 145;
-                      break;
-                    }
-                  }
-                  bf.next = 143;
-                  return X("/redBag/createTrans?price=".concat(b1.data.aliPayTotalPrice, "&fundsChannelType=0&yToken=0&deviceId=").concat(q));
-                case 143:
-                  b2 = bf.sent;
-                  console.log("提现：".concat(b2.message));
-                case 145:
-                  bf.next = 148;
-                  break;
-                case 147:
-                  console.log("获取钱包id失败");
-                case 148:
-                  bf.next = 87;
-                  break;
-                case 150:
-                  bf.next = 155;
-                  break;
-                case 152:
-                  bf.prev = 152;
-                  bf.t0 = bf.catch(85);
-                  aM.e(bf.t0);
-                case 155:
-                  bf.prev = 155;
-                  aM.f();
-                  return bf.finish(155);
-                case 158:
-                  console.log("————————————");
-                  console.log("阅读抽奖");
-                  r = "";
-                  console.log("获取登录cookie");
-                  bf.next = 164;
-                  return a1("/prod-api/user-read/app/login?id=".concat(t, "&sessionId=").concat(z, "&deviceId=").concat(q));
-                case 164:
-                  if (r = bf.sent, r) {
-                    {
-                      bf.next = 167;
-                      break;
-                    }
-                  }
-                  return bf.abrupt("continue", 225);
-                case 167:
-                  console.log(r);
-                  bf.next = 170;
-                  return a3("/prod-api/user-read/list/".concat(af()));
-                case 170:
-                  b3 = bf.sent;
-                  b4 = c(b3.data.articleIsReadList);
-                  bf.prev = 172;
-                  b4.s();
-                case 174:
-                  if ((b5 = b4.n()).done) {
-                    {
-                      bf.next = 190;
-                      break;
-                    }
-                  }
-                  b6 = b5.value;
-                  console.log("文章：".concat(b6.title));
-                  bf.next = 179;
-                  return L("/api/article/detail?id=".concat(b6.newsId));
-                case 179:
-                  bf.sent;
-                  bf.next = 182;
-                  return L("/api/article/read_time?channel_article_id=".concat(b6.newsId, "&is_end=true&read_time=7934"));
-                case 182:
-                  bf.sent;
-                  b7 = JSON.stringify({
-                    timestamp: Date.now(),
-                    articleId: b6.id,
-                    accountId: t
-                  });
-                  bf.next = 186;
-                  return a3("/prod-api/already-read/article/new?signature=".concat(ab(b7)), b7);
-                case 186:
-                  b8 = bf.sent;
-                  console.log("阅读：".concat(b8.msg));
-                case 188:
-                  bf.next = 174;
-                  break;
-                case 190:
-                  bf.next = 195;
-                  break;
-                case 192:
-                  bf.prev = 192;
-                  bf.t1 = bf.catch(172);
-                  b4.e(bf.t1);
-                case 195:
-                  bf.prev = 195;
-                  b4.f();
-                  return bf.finish(195);
-                case 198:
-                  bf.next = 200;
-                  return a3("/prod-api/user-read-count/count/".concat(af()));
-                case 200:
-                  if (b9 = bf.sent, console.log("剩余抽奖次数：".concat(b9.data)), !(b9.data > 0)) {
-                    {
-                      bf.next = 220;
-                      break;
-                    }
-                  }
-                  s = "";
-                  bf.next = 206;
-                  return a5("/tzrb/user/loginWC?accountId=".concat(t, "&sessionId=").concat(z));
-                case 206:
-                  s = bf.sent;
-                  console.log("获取抽奖cookie");
-                  console.log(s);
-                  bf.next = 211;
-                  return a7("/tzrb/awardUpgrade/list?activityId=67");
-                case 211:
-                  ba = bf.sent;
-                  bb = ba.data;
-                  bc = g().mark(function bB() {
-                    {
-                      var bD;
-                      var bE;
-                      return g().wrap(function (bF) {
-                        {
-                          for (;;) {
-                            switch (bF.prev = bF.next) {
-                              case 0:
-                                bF.next = 2;
-                                return a9("/tzrb/userAwardRecordUpgrade/saveUpdate", "activityId=67&sessionId=undefined&sig=undefined&token=undefined");
-                              case 2:
-                                bD = bF.sent;
-                                bE = bb.findIndex(function (bI) {
-                                  return bI.id == bD.data;
-                                });
-                                -1 != bE ? (console.log("抽奖获得：".concat(bb[bE].title)), D += "用户：".concat(u, " 抽奖获得：").concat(bb[bE].title, "\n")) : console.log(JSON.stringify(bD));
-                              case 5:
-                              case "end":
-                                return bF.stop();
-                            }
-                          }
-                        }
-                      }, bB);
-                    }
-                  });
-                  bd = 0;
-                case 215:
-                  if (!(bd < b9.data)) {
-                    {
-                      bf.next = 220;
-                      break;
-                    }
-                  }
-                  return bf.delegateYield(bc(), "t2", 217);
-                case 217:
-                  bd++;
-                  bf.next = 215;
-                  break;
-                case 220:
-                  bf.next = 225;
-                  break;
-                case 222:
-                  bf.prev = 222;
-                  bf.t3 = bf.catch(14);
-                  console.log(bf.t3);
-                case 225:
-                  bf.next = 12;
-                  break;
-                case 227:
-                  bf.next = 232;
-                  break;
-                case 229:
-                  bf.prev = 229;
-                  bf.t4 = bf.catch(10);
-                  at.e(bf.t4);
-                case 232:
-                  bf.prev = 232;
-                  at.f();
-                  return bf.finish(232);
-                case 235:
-                  if (!D) {
-                    {
-                      bf.next = 238;
-                      break;
-                    }
-                  }
-                  bf.next = 238;
-                  return am(D);
-                case 238:
-                case "end":
-                  return bf.stop();
-              }
-            }
-          }
-        }, aq, null, [[10, 229, 232, 235], [14, 222], [85, 152, 155, 158], [172, 192, 195, 198]]);
-      }
-    }));
-    return G.apply(this, arguments);
-  }
-  function H(ao) {
-    return I.apply(this, arguments);
-  }
-  function I() {
-    I = i(g().mark(function ap(aq) {
-      {
-        return g().wrap(function (at) {
-          {
-            for (;;) {
-              switch (at.prev = at.next) {
-                case 0:
-                  return at.abrupt("return", new Promise(function (av) {
-                    {
-                      var ax = {
-                        url: "https://passport.tmuyun.com".concat(aq),
-                        headers: {
-                          Connection: "Keep-Alive",
-                          "Cache-Control": "no-cache",
-                          "X-REQUEST-ID": ae(),
-                          "Accept-Encoding": "gzip",
-                          "user-agent": o
-                        }
-                      };
-                      $.get(ax, function () {
-                        {
-                          var az = i(g().mark(function aB(aC, aD, aE) {
-                            return g().wrap(function (aH) {
-                              {
-                                for (;;) {
-                                  switch (aH.prev = aH.next) {
-                                    case 0:
-                                      try {
-                                        aC ? (console.log("".concat(JSON.stringify(aC))), console.log("".concat($.name, " API请求失败，请检查网路重试"))) : av(JSON.parse(aE));
-                                      } catch (aK) {
-                                        {
-                                          $.logErr(aK, aD);
-                                        }
-                                      } finally {
-                                        {
-                                          av();
-                                        }
-                                      }
-                                    case 1:
-                                    case "end":
-                                      return aH.stop();
-                                  }
-                                }
-                              }
-                            }, aB);
-                          }));
-                          return function (aC, aD, aE) {
-                            {
-                              return az.apply(this, arguments);
-                            }
-                          };
-                        }
-                      }());
-                    }
-                  }));
-                case 1:
-                case "end":
-                  return at.stop();
-              }
-            }
-          }
-        }, ap);
-      }
-    }));
-    return I.apply(this, arguments);
-  }
-  function J(ao) {
-    return K.apply(this, arguments);
-  }
-  function K() {
-    K = i(g().mark(function ap(aq) {
-      {
-        var ar;
-        return g().wrap(function (as) {
-          {
-            for (;;) {
-              switch (as.prev = as.next) {
-                case 0:
-                  ar = ac();
-                  return as.abrupt("return", new Promise(function (av) {
-                    {
-                      var ax = {
-                        Connection: "Keep-Alive",
-                        "X-REQUEST-ID": ar.uuid,
-                        "X-SIGNATURE": ar.signature,
-                        "Cache-Control": "no-cache",
-                        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-                        "Accept-Encoding": "gzip",
-                        "user-agent": o
-                      };
-                      var ay = {
-                        url: "https://passport.tmuyun.com".concat(aq),
-                        headers: ax,
-                        body: ar.body
-                      };
-                      $.post(ay, function () {
-                        {
-                          var aA = i(g().mark(function aB(aC, aD, aE) {
-                            return g().wrap(function (aG) {
-                              {
-                                for (;;) {
-                                  switch (aG.prev = aG.next) {
-                                    case 0:
-                                      try {
-                                        {
-                                          aC ? (console.log("".concat(JSON.stringify(aC))), console.log("".concat($.name, " API请求失败，请检查网路重试"))) : av(JSON.parse(aE));
-                                        }
-                                      } catch (aI) {
-                                        {
-                                          $.logErr(aI, aD);
-                                        }
-                                      } finally {
-                                        {
-                                          av();
-                                        }
-                                      }
-                                    case 1:
-                                    case "end":
-                                      return aG.stop();
-                                  }
-                                }
-                              }
-                            }, aB);
-                          }));
-                          return function (aC, aD, aE) {
-                            return aA.apply(this, arguments);
-                          };
-                        }
-                      }());
-                    }
-                  }));
-                case 2:
-                case "end":
-                  return as.stop();
-              }
-            }
-          }
-        }, ap);
-      }
-    }));
-    return K.apply(this, arguments);
-  }
-  function L(ao) {
-    return M.apply(this, arguments);
-  }
-  function M() {
-    M = i(g().mark(function ap(aq) {
-      var at;
-      return g().wrap(function (au) {
-        for (;;) {
-          switch (au.prev = au.next) {
-            case 0:
-              at = ad(aq);
-              return au.abrupt("return", new Promise(function (aw) {
-                var ax = {
-                  Connection: "Keep-Alive",
-                  "X-TIMESTAMP": at.time,
-                  "X-SESSION-ID": z,
-                  "X-REQUEST-ID": at.uuid,
-                  "X-SIGNATURE": at.signature,
-                  "X-TENANT-ID": n,
-                  "X-ACCOUNT-ID": t,
-                  "Cache-Control": "no-cache",
-                  "Accept-Encoding": "gzip",
-                  "user-agent": p
-                };
-                var ay = {
-                  url: "https://vapp.taizhou.com.cn".concat(aq),
-                  headers: ax
-                };
-                $.get(ay, function () {
-                  var aA = i(g().mark(function aB(aC, aD, aE) {
-                    return g().wrap(function (aF) {
-                      for (;;) {
-                        switch (aF.prev = aF.next) {
-                          case 0:
-                            if (aF.prev = 0, !aC) {
-                              {
-                                aF.next = 6;
-                                break;
-                              }
-                            }
-                            console.log("".concat(JSON.stringify(aC)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aF.next = 9;
-                            break;
-                          case 6:
-                            aF.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            aw(JSON.parse(aE));
-                          case 9:
-                            aF.next = 14;
-                            break;
-                          case 11:
-                            aF.prev = 11;
-                            aF.t0 = aF.catch(0);
-                            $.logErr(aF.t0, aD);
-                          case 14:
-                            aF.prev = 14;
-                            aw();
-                            return aF.finish(14);
-                          case 17:
-                          case "end":
-                            return aF.stop();
-                        }
-                      }
-                    }, aB, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (aC, aD, aE) {
-                    return aA.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 2:
-            case "end":
-              return au.stop();
-          }
-        }
-      }, ap);
-    }));
-    return M.apply(this, arguments);
-  }
-  function N(ao, ap) {
-    return O.apply(this, arguments);
-  }
-  function O() {
-    O = i(g().mark(function ap(aq, ar) {
-      var at;
-      return g().wrap(function (au) {
-        for (;;) {
-          switch (au.prev = au.next) {
-            case 0:
-              at = ad(aq);
-              return au.abrupt("return", new Promise(function (aw) {
-                var ax = {
-                  url: "https://vapp.taizhou.com.cn".concat(aq),
-                  headers: {
-                    Connection: "Keep-Alive",
-                    "X-TIMESTAMP": at.time,
-                    "X-SESSION-ID": z,
-                    "X-REQUEST-ID": at.uuid,
-                    "X-SIGNATURE": at.signature,
-                    "X-TENANT-ID": n,
-                    "X-ACCOUNT-ID": t,
-                    "Cache-Control": "no-cache",
-                    "Accept-Encoding": "gzip",
-                    "user-agent": p
-                  },
-                  body: ar
-                };
-                $.post(ax, function () {
-                  var az = i(g().mark(function aA(aB, aC, aD) {
-                    return g().wrap(function (aE) {
-                      for (;;) {
-                        switch (aE.prev = aE.next) {
-                          case 0:
-                            if (aE.prev = 0, !aB) {
-                              aE.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(aB)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aE.next = 9;
-                            break;
-                          case 6:
-                            aE.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            aw(JSON.parse(aD));
-                          case 9:
-                            aE.next = 14;
-                            break;
-                          case 11:
-                            aE.prev = 11;
-                            aE.t0 = aE.catch(0);
-                            $.logErr(aE.t0, aC);
-                          case 14:
-                            aE.prev = 14;
-                            aw();
-                            return aE.finish(14);
-                          case 17:
-                          case "end":
-                            return aE.stop();
-                        }
-                      }
-                    }, aA, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (aB, aC, aD) {
-                    return az.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 2:
-            case "end":
-              return au.stop();
-          }
-        }
-      }, ap);
-    }));
-    return O.apply(this, arguments);
-  }
-  function P(ao) {
-    return Q.apply(this, arguments);
-  }
-  function Q() {
-    Q = i(g().mark(function ap(aq) {
-      return g().wrap(function (at) {
-        for (;;) {
-          switch (at.prev = at.next) {
-            case 0:
-              return at.abrupt("return", new Promise(function (av) {
-                var aw = {
-                  url: "https://act.tmlyun.com/activity-api/signin/h5".concat(aq),
-                  headers: {
-                    accept: "application/json, text/plain, */*",
-                    authorization: A,
-                    "sec-fetch-site": "sec-fetch-site",
-                    "accept-language": "zh-CN,zh-Hans;q=0.9",
-                    "sec-fetch-mode": "cors",
-                    "sec-fetch-dest": "empty",
-                    "user-agent": p
-                  }
-                };
-                $.get(aw, function () {
-                  var ay = i(g().mark(function az(aA, aB, aC) {
-                    return g().wrap(function (aD) {
-                      for (;;) {
-                        switch (aD.prev = aD.next) {
-                          case 0:
-                            if (aD.prev = 0, !aA) {
-                              aD.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(aA)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aD.next = 9;
-                            break;
-                          case 6:
-                            aD.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            av(JSON.parse(aC));
-                          case 9:
-                            aD.next = 14;
-                            break;
-                          case 11:
-                            aD.prev = 11;
-                            aD.t0 = aD.catch(0);
-                            $.logErr(aD.t0, aB);
-                          case 14:
-                            aD.prev = 14;
-                            av();
-                            return aD.finish(14);
-                          case 17:
-                          case "end":
-                            return aD.stop();
-                        }
-                      }
-                    }, az, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (aA, aB, aC) {
-                    return ay.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return at.stop();
-          }
-        }
-      }, ap);
-    }));
-    return Q.apply(this, arguments);
-  }
-  function R(ao, ap) {
-    return S.apply(this, arguments);
-  }
-  function S() {
-    S = i(g().mark(function ao(ap, aq) {
-      return g().wrap(function (at) {
-        for (;;) {
-          switch (at.prev = at.next) {
-            case 0:
-              return at.abrupt("return", new Promise(function (av) {
-                var ax = {
-                  url: "https://act.tmlyun.com/activity-api/signin/h5".concat(ap),
-                  headers: {
-                    "content-type": "application/json",
-                    accept: "application/json, text/plain, */*",
-                    authorization: A,
-                    "sec-fetch-site": "sec-fetch-site",
-                    "accept-language": "zh-CN,zh-Hans;q=0.9",
-                    "sec-fetch-mode": "cors",
-                    "sec-fetch-dest": "empty",
-                    "user-agent": p
-                  },
-                  body: JSON.stringify(aq)
-                };
-                $.post(ax, function () {
-                  var ay = i(g().mark(function az(aA, aB, aC) {
-                    return g().wrap(function (aE) {
-                      for (;;) {
-                        switch (aE.prev = aE.next) {
-                          case 0:
-                            if (aE.prev = 0, !aA) {
-                              aE.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(aA)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aE.next = 9;
-                            break;
-                          case 6:
-                            aE.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            av(JSON.parse(aC));
-                          case 9:
-                            aE.next = 14;
-                            break;
-                          case 11:
-                            aE.prev = 11;
-                            aE.t0 = aE.catch(0);
-                            $.logErr(aE.t0, aB);
-                          case 14:
-                            aE.prev = 14;
-                            av();
-                            return aE.finish(14);
-                          case 17:
-                          case "end":
-                            return aE.stop();
-                        }
-                      }
-                    }, az, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (aA, aB, aC) {
-                    return ay.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return at.stop();
-          }
-        }
-      }, ao);
-    }));
-    return S.apply(this, arguments);
-  }
-  function T(ao) {
-    return U.apply(this, arguments);
-  }
-  function U() {
-    U = i(g().mark(function aq(ar) {
-      return g().wrap(function (at) {
-        for (;;) {
-          switch (at.prev = at.next) {
-            case 0:
-              return at.abrupt("return", new Promise(function (av) {
-                var aw = {
-                  url: "https://act.tmlyun.com/activity-api/lottery/h5".concat(ar),
-                  headers: {
-                    accept: "application/json, text/plain, */*",
-                    authorization: B,
-                    "sec-fetch-site": "sec-fetch-site",
-                    "accept-language": "zh-CN,zh-Hans;q=0.9",
-                    "sec-fetch-mode": "cors",
-                    "sec-fetch-dest": "empty",
-                    "user-agent": p
-                  }
-                };
-                $.get(aw, function () {
-                  var ay = i(g().mark(function az(aA, aB, aC) {
-                    return g().wrap(function (aD) {
-                      for (;;) {
-                        switch (aD.prev = aD.next) {
-                          case 0:
-                            if (aD.prev = 0, !aA) {
-                              aD.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(aA)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aD.next = 9;
-                            break;
-                          case 6:
-                            aD.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            av(JSON.parse(aC));
-                          case 9:
-                            aD.next = 14;
-                            break;
-                          case 11:
-                            aD.prev = 11;
-                            aD.t0 = aD.catch(0);
-                            $.logErr(aD.t0, aB);
-                          case 14:
-                            aD.prev = 14;
-                            av();
-                            return aD.finish(14);
-                          case 17:
-                          case "end":
-                            return aD.stop();
-                        }
-                      }
-                    }, az, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (aA, aB, aC) {
-                    return ay.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return at.stop();
-          }
-        }
-      }, aq);
-    }));
-    return U.apply(this, arguments);
-  }
-  function V(ao, ap) {
-    return W.apply(this, arguments);
-  }
-  function W() {
-    W = i(g().mark(function ap(aq, ar) {
-      return g().wrap(function (at) {
-        for (;;) {
-          switch (at.prev = at.next) {
-            case 0:
-              return at.abrupt("return", new Promise(function (au) {
-                var aw = {
-                  url: "https://act.tmlyun.com/activity-api/lottery".concat(aq),
-                  headers: {
-                    "content-type": "application/json",
-                    accept: "application/json, text/plain, */*",
-                    authorization: B,
-                    "sec-fetch-site": "sec-fetch-site",
-                    "accept-language": "zh-CN,zh-Hans;q=0.9",
-                    "sec-fetch-mode": "cors",
-                    "sec-fetch-dest": "empty",
-                    "user-agent": p
-                  },
-                  body: JSON.stringify(ar)
-                };
-                $.post(aw, function () {
-                  var ay = i(g().mark(function az(aA, aB, aC) {
-                    return g().wrap(function (aD) {
-                      for (;;) {
-                        switch (aD.prev = aD.next) {
-                          case 0:
-                            if (aD.prev = 0, !aA) {
-                              aD.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(aA)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aD.next = 9;
-                            break;
-                          case 6:
-                            aD.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            au(JSON.parse(aC));
-                          case 9:
-                            aD.next = 14;
-                            break;
-                          case 11:
-                            aD.prev = 11;
-                            aD.t0 = aD.catch(0);
-                            $.logErr(aD.t0, aB);
-                          case 14:
-                            aD.prev = 14;
-                            au();
-                            return aD.finish(14);
-                          case 17:
-                          case "end":
-                            return aD.stop();
-                        }
-                      }
-                    }, az, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (aA, aB, aC) {
-                    return ay.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return at.stop();
-          }
-        }
-      }, ap);
-    }));
-    return W.apply(this, arguments);
-  }
-  function X(ao) {
-    return Y.apply(this, arguments);
-  }
-  function Y() {
-    Y = i(g().mark(function aq(ar) {
-      return g().wrap(function (au) {
-        for (;;) {
-          switch (au.prev = au.next) {
-            case 0:
-              return au.abrupt("return", new Promise(function (aw) {
-                var ax = {
-                  accept: "application/json, text/plain, */*",
-                  authorization: C,
-                  "sec-fetch-site": "sec-fetch-site",
-                  "accept-language": "zh-CN,zh-Hans;q=0.9",
-                  "sec-fetch-mode": "cors",
-                  "sec-fetch-dest": "empty",
-                  "user-agent": p
-                };
-                var ay = {
-                  url: "https://my.tmlyun.com/equity-api".concat(ar),
-                  headers: ax
-                };
-                $.get(ay, function () {
-                  var aA = i(g().mark(function aB(aC, aD, aE) {
-                    return g().wrap(function (aF) {
-                      for (;;) {
-                        switch (aF.prev = aF.next) {
-                          case 0:
-                            if (aF.prev = 0, !aC) {
-                              aF.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(aC)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aF.next = 9;
-                            break;
-                          case 6:
-                            aF.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            aw(JSON.parse(aE));
-                          case 9:
-                            aF.next = 14;
-                            break;
-                          case 11:
-                            aF.prev = 11;
-                            aF.t0 = aF.catch(0);
-                            $.logErr(aF.t0, aD);
-                          case 14:
-                            aF.prev = 14;
-                            aw();
-                            return aF.finish(14);
-                          case 17:
-                          case "end":
-                            return aF.stop();
-                        }
-                      }
-                    }, aB, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (aC, aD, aE) {
-                    return aA.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return au.stop();
-          }
-        }
-      }, aq);
-    }));
-    return Y.apply(this, arguments);
-  }
-  function Z(ao, ap) {
-    return a0.apply(this, arguments);
-  }
-  function a0() {
-    a0 = i(g().mark(function aq(ar, as) {
-      return g().wrap(function (au) {
-        for (;;) {
-          switch (au.prev = au.next) {
-            case 0:
-              return au.abrupt("return", new Promise(function (av) {
-                var ax = {
-                  url: "https://my.tmlyun.com/equity-api".concat(ar),
-                  headers: {
-                    "content-type": "application/json",
-                    accept: "application/json, text/plain, */*",
-                    authorization: C,
-                    "sec-fetch-site": "sec-fetch-site",
-                    "accept-language": "zh-CN,zh-Hans;q=0.9",
-                    "sec-fetch-mode": "cors",
-                    "sec-fetch-dest": "empty",
-                    "user-agent": p
-                  },
-                  body: JSON.stringify(as)
-                };
-                $.post(ax, function () {
-                  var az = i(g().mark(function aA(aB, aC, aD) {
-                    return g().wrap(function (aF) {
-                      for (;;) {
-                        switch (aF.prev = aF.next) {
-                          case 0:
-                            if (aF.prev = 0, !aB) {
-                              aF.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(aB)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aF.next = 9;
-                            break;
-                          case 6:
-                            aF.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            av(JSON.parse(aD));
-                          case 9:
-                            aF.next = 14;
-                            break;
-                          case 11:
-                            aF.prev = 11;
-                            aF.t0 = aF.catch(0);
-                            $.logErr(aF.t0, aC);
-                          case 14:
-                            aF.prev = 14;
-                            av();
-                            return aF.finish(14);
-                          case 17:
-                          case "end":
-                            return aF.stop();
-                        }
-                      }
-                    }, aA, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (aB, aC, aD) {
-                    return az.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return au.stop();
-          }
-        }
-      }, aq);
-    }));
-    return a0.apply(this, arguments);
-  }
-  function a1(ao) {
-    return a2.apply(this, arguments);
-  }
-  function a2() {
-    a2 = i(g().mark(function ao(ap) {
-      return g().wrap(function (ar) {
-        for (;;) {
-          switch (ar.prev = ar.next) {
-            case 0:
-              return ar.abrupt("return", new Promise(function (as) {
-                var au = {
-                  url: "https://xmt.taizhou.com.cn".concat(ap),
-                  headers: {
-                    Connection: "Keep-Alive",
-                    Accept: "*/*",
-                    Cookie: r,
-                    "Sec-Fetch-Site": "same-origin",
-                    "Sec-Fetch-Mode": "cors",
-                    "Sec-Fetch-Dest": "empty",
-                    Referer: "https://xmt.taizhou.com.cn/readingLuck-v2/",
-                    "X-Requested-With": "com.shangc.tiennews.taizhou",
-                    "Accept-Encoding": "gzip, deflate",
-                    "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-                    "user-agent": "Mozilla/5.0 (Linux; Android 11; 21091116AC Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36;xsb_wangchao;xsb_wangchao;6.0.2;native_app;6.10.0"
-                  }
-                };
-                $.get(au, function () {
-                  var aw = i(g().mark(function ax(ay, az, aA) {
-                    return g().wrap(function (aC) {
-                      for (;;) {
-                        switch (aC.prev = aC.next) {
-                          case 0:
-                            if (aC.prev = 0, !ay) {
-                              aC.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(ay)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aC.next = 16;
-                            break;
-                          case 6:
-                            aC.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            if (200 == JSON.parse(aA).code) {
-                              aC.next = 13;
-                              break;
-                            }
-                            console.log(JSON.parse(aA).msg);
-                            D += "用户：".concat(u, " ").concat(JSON.parse(aA).msg, "\n");
-                            as("");
-                            return aC.abrupt("return");
-                          case 13:
-                            r = $.isNode() ? az.headers["set-cookie"][0] : az.headers["set-cookie"] || az.headers["Set-Cookie"];
-                            r = r.split(";")[0];
-                            as(r);
-                          case 16:
-                            aC.next = 21;
-                            break;
-                          case 18:
-                            aC.prev = 18;
-                            aC.t0 = aC.catch(0);
-                            $.logErr(aC.t0, az);
-                          case 21:
-                            aC.prev = 21;
-                            as();
-                            return aC.finish(21);
-                          case 24:
-                          case "end":
-                            return aC.stop();
-                        }
-                      }
-                    }, ax, null, [[0, 18, 21, 24]]);
-                  }));
-                  return function (ay, az, aA) {
-                    return aw.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return ar.stop();
-          }
-        }
-      }, ao);
-    }));
-    return a2.apply(this, arguments);
-  }
-  function a3(ao) {
-    return a4.apply(this, arguments);
-  }
-  function a4() {
-    a4 = i(g().mark(function ao(ap) {
-      return g().wrap(function (ar) {
-        for (;;) {
-          switch (ar.prev = ar.next) {
-            case 0:
-              return ar.abrupt("return", new Promise(function (as) {
-                var au = {
-                  url: "https://xmt.taizhou.com.cn".concat(ap),
-                  headers: {
-                    Connection: "Keep-Alive",
-                    Accept: "*/*",
-                    Cookie: r,
-                    "Sec-Fetch-Site": "same-origin",
-                    "Sec-Fetch-Mode": "cors",
-                    "Sec-Fetch-Dest": "empty",
-                    Referer: "https://xmt.taizhou.com.cn/readingLuck-v2/",
-                    "X-Requested-With": "com.shangc.tiennews.taizhou",
-                    "Accept-Encoding": "gzip, deflate",
-                    "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-                    "user-agent": "Mozilla/5.0 (Linux; Android 11; 21091116AC Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36;xsb_wangchao;xsb_wangchao;6.0.2;native_app;6.10.0"
-                  }
-                };
-                $.get(au, function () {
-                  var aw = i(g().mark(function ax(ay, az, aA) {
-                    return g().wrap(function (aC) {
-                      for (;;) {
-                        switch (aC.prev = aC.next) {
-                          case 0:
-                            if (aC.prev = 0, !ay) {
-                              aC.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(ay)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aC.next = 9;
-                            break;
-                          case 6:
-                            aC.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            as(JSON.parse(aA));
-                          case 9:
-                            aC.next = 14;
-                            break;
-                          case 11:
-                            aC.prev = 11;
-                            aC.t0 = aC.catch(0);
-                            $.logErr(aC.t0, az);
-                          case 14:
-                            aC.prev = 14;
-                            as();
-                            return aC.finish(14);
-                          case 17:
-                          case "end":
-                            return aC.stop();
-                        }
-                      }
-                    }, ax, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (ay, az, aA) {
-                    return aw.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return ar.stop();
-          }
-        }
-      }, ao);
-    }));
-    return a4.apply(this, arguments);
-  }
-  function a5(ao) {
-    return a6.apply(this, arguments);
-  }
-  function a6() {
-    a6 = i(g().mark(function ao(ap) {
-      return g().wrap(function (ar) {
-        for (;;) {
-          switch (ar.prev = ar.next) {
-            case 0:
-              return ar.abrupt("return", new Promise(function (at) {
-                var av = {
-                  Connection: "Keep-Alive",
-                  Accept: "*/*",
-                  "Sec-Fetch-Site": "same-origin",
-                  "Sec-Fetch-Mode": "cors",
-                  "Sec-Fetch-Dest": "empty",
-                  cookie: s,
-                  Referer: "https://xmt.taizhou.com.cn/readingLuck-v1/",
-                  "X-Requested-With": "com.shangc.tiennews.taizhou",
-                  "Accept-Encoding": "gzip, deflate",
-                  "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-                  "user-agent": "Mozilla/5.0 (Linux; Android 11; 21091116AC Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36;xsb_wangchao;xsb_wangchao;6.0.2;native_app;6.10.0"
-                };
-                var aw = {
-                  url: "https://srv-app.taizhou.com.cn".concat(ap),
-                  headers: av
-                };
-                $.get(aw, function () {
-                  var ax = i(g().mark(function ay(az, aA, aB) {
-                    return g().wrap(function (aD) {
-                      for (;;) {
-                        switch (aD.prev = aD.next) {
-                          case 0:
-                            if (aD.prev = 0, !az) {
-                              aD.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(az)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aD.next = 11;
-                            break;
-                          case 6:
-                            aD.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            s = $.isNode() ? aA.headers["set-cookie"][0] : aA.headers["set-cookie"] || aA.headers["Set-Cookie"];
-                            s = s.split(";")[0];
-                            at(s);
-                          case 11:
-                            aD.next = 16;
-                            break;
-                          case 13:
-                            aD.prev = 13;
-                            aD.t0 = aD.catch(0);
-                            $.logErr(aD.t0, aA);
-                          case 16:
-                            aD.prev = 16;
-                            at();
-                            return aD.finish(16);
-                          case 19:
-                          case "end":
-                            return aD.stop();
-                        }
-                      }
-                    }, ay, null, [[0, 13, 16, 19]]);
-                  }));
-                  return function (az, aA, aB) {
-                    return ax.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return ar.stop();
-          }
-        }
-      }, ao);
-    }));
-    return a6.apply(this, arguments);
-  }
-  function a7(ao) {
-    return a8.apply(this, arguments);
-  }
-  function a8() {
-    a8 = i(g().mark(function ao(ap) {
-      return g().wrap(function (ar) {
-        for (;;) {
-          switch (ar.prev = ar.next) {
-            case 0:
-              return ar.abrupt("return", new Promise(function (at) {
-                var av = {
-                  url: "https://srv-app.taizhou.com.cn".concat(ap),
-                  headers: {
-                    Connection: "Keep-Alive",
-                    Accept: "*/*",
-                    "Sec-Fetch-Site": "same-origin",
-                    "Sec-Fetch-Mode": "cors",
-                    "Sec-Fetch-Dest": "empty",
-                    cookie: s,
-                    Referer: "https://xmt.taizhou.com.cn/readingLuck-v1/",
-                    "X-Requested-With": "com.shangc.tiennews.taizhou",
-                    "Accept-Encoding": "gzip, deflate",
-                    "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-                    "user-agent": "Mozilla/5.0 (Linux; Android 11; 21091116AC Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36;xsb_wangchao;xsb_wangchao;6.0.2;native_app;6.10.0"
-                  }
-                };
-                $.get(av, function () {
-                  var aw = i(g().mark(function ax(ay, az, aA) {
-                    return g().wrap(function (aC) {
-                      for (;;) {
-                        switch (aC.prev = aC.next) {
-                          case 0:
-                            if (aC.prev = 0, !ay) {
-                              aC.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(ay)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aC.next = 9;
-                            break;
-                          case 6:
-                            aC.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            at(JSON.parse(aA));
-                          case 9:
-                            aC.next = 14;
-                            break;
-                          case 11:
-                            aC.prev = 11;
-                            aC.t0 = aC.catch(0);
-                            $.logErr(aC.t0, az);
-                          case 14:
-                            aC.prev = 14;
-                            at();
-                            return aC.finish(14);
-                          case 17:
-                          case "end":
-                            return aC.stop();
-                        }
-                      }
-                    }, ax, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (ay, az, aA) {
-                    return aw.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return ar.stop();
-          }
-        }
-      }, ao);
-    }));
-    return a8.apply(this, arguments);
-  }
-  function a9(ao, ap) {
-    return aa.apply(this, arguments);
-  }
-  function aa() {
-    aa = i(g().mark(function ao(ap, aq) {
-      return g().wrap(function (as) {
-        for (;;) {
-          switch (as.prev = as.next) {
-            case 0:
-              return as.abrupt("return", new Promise(function (au) {
-                var av = {
-                  Connection: "Keep-Alive",
-                  Accept: "*/*",
-                  "Content-type": "application/x-www-form-urlencoded",
-                  "Sec-Fetch-Site": "same-origin",
-                  "Sec-Fetch-Mode": "cors",
-                  "Sec-Fetch-Dest": "empty",
-                  cookie: s,
-                  Referer: "https://xmt.taizhou.com.cn/readingLuck-v1/",
-                  "X-Requested-With": "com.shangc.tiennews.taizhou",
-                  "Accept-Encoding": "gzip, deflate",
-                  "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-                  "user-agent": "Mozilla/5.0 (Linux; Android 11; 21091116AC Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.4606.85 Mobile Safari/537.36;xsb_wangchao;xsb_wangchao;6.0.2;native_app;6.10.0"
-                };
-                var aw = {
-                  url: "https://srv-app.taizhou.com.cn".concat(ap),
-                  headers: av,
-                  body: aq
-                };
-                $.post(aw, function () {
-                  var ay = i(g().mark(function az(aA, aB, aC) {
-                    return g().wrap(function (aD) {
-                      for (;;) {
-                        switch (aD.prev = aD.next) {
-                          case 0:
-                            if (aD.prev = 0, !aA) {
-                              aD.next = 6;
-                              break;
-                            }
-                            console.log("".concat(JSON.stringify(aA)));
-                            console.log("".concat($.name, " API请求失败，请检查网路重试"));
-                            aD.next = 9;
-                            break;
-                          case 6:
-                            aD.next = 8;
-                            return $.wait(2000);
-                          case 8:
-                            au(JSON.parse(aC));
-                          case 9:
-                            aD.next = 14;
-                            break;
-                          case 11:
-                            aD.prev = 11;
-                            aD.t0 = aD.catch(0);
-                            $.logErr(aD.t0, aB);
-                          case 14:
-                            aD.prev = 14;
-                            au();
-                            return aD.finish(14);
-                          case 17:
-                          case "end":
-                            return aD.stop();
-                        }
-                      }
-                    }, az, null, [[0, 11, 14, 17]]);
-                  }));
-                  return function (aA, aB, aC) {
-                    return ay.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return as.stop();
-          }
-        }
-      }, ao);
-    }));
-    return aa.apply(this, arguments);
-  }
-  function ab(ao) {
-    var ap = l.loadSM2();
-    return ap.doEncrypt(ao, "04A50803A27F000D6B310607EBA2A1C899E82872C0B538CA41DB6F0183B4C7E164DAFC6946ABF93C8AF1C0AD96D0E770D29264EF9F907DDBAE97A2A0BB1036D4AC", 1);
-  }
-  function ac() {
-    var as = new (l.loadJSEncrypt())();
-    as.setPublicKey("MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD6XO7e9YeAOs+cFqwa7ETJ+WXizPqQeXv68i5vqw9pFREsrqiBTRcg7wB0RIp3rJkDpaeVJLsZqYm5TW7FWx/iOiXFc+zCPvaKZric2dXCw27EvlH5rq+zwIPDAJHGAfnn1nmQH7wR3PCatEIb8pz5GFlTHMlluw4ZYmnOwg+thwIDAQAB");
-    v = as.encrypt(v);
-    var au = ae();
-    var av = "client_id=".concat(y, "&password=").concat(v, "&phone_number=").concat(u);
-    var aw = "post%%/web/oauth/credential_auth?".concat(av, "%%").concat(au, "%%");
-    av = "client_id=".concat(y, "&password=").concat(encodeURIComponent(v), "&phone_number=").concat(u);
-    CryptoJS = l.createCryptoJS();
-    var aq = CryptoJS.HmacSHA256(aw, m);
-    var ar = CryptoJS.enc.Hex.stringify(aq);
-    var at = {
-      uuid: au,
-      signature: ar,
-      body: av
-    };
-    return at;
-  }
-  function ad(ao) {
-    var ap = ae();
-    var aq = Date.now();
-    ao.indexOf("?") > 0 && (ao = ao.substring(0, ao.indexOf("?")));
-    CryptoJS = l.createCryptoJS();
-    var ar = CryptoJS.SHA256("".concat(ao, "&&").concat(z, "&&").concat(ap, "&&").concat(aq, "&&").concat(E, "&&").concat(n)).toString();
-    var as = {
-      uuid: ap,
-      time: aq,
-      signature: ar
-    };
-    return as;
-  }
-  function ae() {
-    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (ap) {
-      var aq = 16 * Math.random() | 0;
-      var ar = "x" === ap ? aq : 3 & aq | 8;
-      return ar.toString(16);
-    });
-  }
-  function af() {
-    var ao = new Date();
-    var ap = ao.getFullYear();
-    var aq = String(ao.getMonth() + 1).padStart(2, "0");
-    var ar = String(ao.getDate()).padStart(2, "0");
-    return "".concat(ap).concat(aq).concat(ar);
-  }
-  function ag() {
-    var ao = "6.0.2";
-    var ap = ae();
-    var aq = ah(["M1903F2A", "M2001J2E", "M2001J2C", "M2001J1E", "M2001J1C", "M2002J9E", "M2011K2C", "M2102K1C", "M2101K9C", "2107119DC", "2201123C", "2112123AC", "2201122C", "2211133C", "2210132C", "2304FPN6DC", "23127PN0CC", "24031PN0DC", "23090RA98C", "2312DRA50C", "2312CRAD3C", "2312DRAABC", "22101316UCP", "22101316C"]);
-    var ar = "Xiaomi " + aq;
-    var as = "Android";
-    var at = "".concat(as.toUpperCase(), ";").concat("11", ";").concat(y, ";").concat(ao, ";1.0;null;").concat(aq);
-    var au = "".concat(ao, ";").concat(ap, ";").concat(ar, ";").concat(as, ";").concat("11", ";").concat("xiaomi", ";").concat("6.10.0");
-    var av = {
-      ua: at,
-      commonUa: au,
-      uuid: ap
-    };
-    return av;
-  }
-  function ah(ao) {
-    return ao[Math.floor(Math.random() * ao.length)];
-  }
-  function ai() {
-    return aj.apply(this, arguments);
-  }
-  function aj() {
-    aj = i(g().mark(function ap() {
-      var aq;
-      return g().wrap(function ar(as) {
-        for (;;) {
-          switch (as.prev = as.next) {
-            case 0:
-              if (aq = $.getdata("Utils_Code") || "", !aq || !Object.keys(aq).length) {
-                as.next = 5;
-                break;
-              }
-              console.log("✅ ".concat($.name, ": 缓存中存在Utils代码, 跳过下载"));
-              eval(aq);
-              return as.abrupt("return", creatUtils());
-            case 5:
-              console.log("🚀 ".concat($.name, ": 开始下载Utils代码"));
-              return as.abrupt("return", new Promise(function () {
-                var aw = i(g().mark(function ax(ay) {
-                  return g().wrap(function aA(aB) {
-                    for (;;) {
-                      switch (aB.prev = aB.next) {
-                        case 0:
-                          $.getScript("".concat(k, "/https://raw.githubusercontent.com/xzxxn777/Surge/main/Utils/Utils.js")).then(function (aC) {
-                            $.setdata(aC, "Utils_Code");
-                            eval(aC);
-                            console.log("✅ Utils加载成功, 请继续");
-                            ay(creatUtils());
-                          });
-                        case 1:
-                        case "end":
-                          return aB.stop();
-                      }
-                    }
-                  }, ax);
-                }));
-                return function (ay) {
-                  return aw.apply(this, arguments);
-                };
-              }()));
-            case 7:
-            case "end":
-              return as.stop();
-          }
-        }
-      }, ap);
-    }));
-    return aj.apply(this, arguments);
-  }
-  function ak() {
-    return al.apply(this, arguments);
-  }
-  function al() {
-    al = i(g().mark(function ao() {
-      return g().wrap(function (ar) {
-        for (;;) {
-          switch (ar.prev = ar.next) {
-            case 0:
-              return ar.abrupt("return", new Promise(function (at) {
-                var au = {
-                  url: "https://fastly.jsdelivr.net/gh/xzxxn777/Surge@main/Utils/Notice.json"
-                };
-                $.get(au, function () {
-                  var aw = i(g().mark(function ax(ay, az, aA) {
-                    return g().wrap(function (aB) {
-                      for (;;) {
-                        switch (aB.prev = aB.next) {
-                          case 0:
-                            try {
-                              ay ? (console.log("".concat(JSON.stringify(ay))), console.log("".concat($.name, " API请求失败，请检查网路重试"))) : console.log(JSON.parse(aA).notice);
-                            } catch (aC) {
-                              $.logErr(aC, az);
-                            } finally {
-                              at();
-                            }
-                          case 1:
-                          case "end":
-                            return aB.stop();
-                        }
-                      }
-                    }, ax);
-                  }));
-                  return function (ay, az, aA) {
-                    return aw.apply(this, arguments);
-                  };
-                }());
-              }));
-            case 1:
-            case "end":
-              return ar.stop();
-          }
-        }
-      }, ao);
-    }));
-    return al.apply(this, arguments);
-  }
-  function am(ao) {
-    return an.apply(this, arguments);
-  }
-  function an() {
-    an = i(g().mark(function ao(ap) {
-      return g().wrap(function (as) {
-        for (;;) {
-          switch (as.prev = as.next) {
-            case 0:
-              if (!$.isNode()) {
-                as.next = 5;
-                break;
-              }
-              as.next = 3;
-              return notify.sendNotify($.name, ap);
-            case 3:
-              as.next = 6;
-              break;
-            case 5:
-              $.msg($.name, "", ap);
-            case 6:
-            case "end":
-              return as.stop();
-          }
-        }
-      }, ao);
-    }));
-    return an.apply(this, arguments);
-  }
-  i(g().mark(function ao() {
-    return g().wrap(function (ap) {
-      for (;;) {
-        switch (ap.prev = ap.next) {
-          case 0:
-            ap.next = 2;
-            return ak();
-          case 2:
-            ap.next = 4;
-            return F();
-          case 4:
-          case "end":
-            return ap.stop();
-        }
-      }
-    }, ao);
-  }))().catch(function (ap) {
-    $.log(ap);
-  }).finally(function () {
-    $.done({});
-  });
-})();
-function Env(t, e) {
-  class s {
-    constructor(t) {
-      this.env = t;
-    }
-    send(t, e = "GET") {
-      t = "string" == typeof t ? {
-        url: t
-      } : t;
-      let s = this.get;
-      "POST" === e && (s = this.post);
-      return new Promise((e, i) => {
-        s.call(this, t, (t, s, o) => {
-          t ? i(t) : e(s);
-        });
-      });
-    }
-    get(t) {
-      return this.send.call(this.env, t);
-    }
-    post(t) {
-      return this.send.call(this.env, t, "POST");
     }
   }
   return new class {
-    constructor(t, e) {
-      this.logLevels = {
-        debug: 0,
-        info: 1,
-        warn: 2,
-        error: 3
-      };
-      this.logLevelPrefixs = {
-        debug: "[DEBUG] ",
-        info: "[INFO] ",
-        warn: "[WARN] ",
-        error: "[ERROR] "
-      };
-      this.logLevel = "info";
-      this.name = t;
-      this.http = new s(this);
-      this.data = null;
-      this.dataFile = "box.dat";
-      this.logs = [];
-      this.isMute = false;
-      this.isNeedRewrite = false;
-      this.logSeparator = "\n";
-      this.encoding = "utf-8";
-      this.startTime = new Date().getTime();
-      Object.assign(this, e);
-      this.log("", `🔔${this.name}, 开始!`);
-    }
-    getEnv() {
-      return "undefined" != typeof $environment && $environment["surge-version"] ? "Surge" : "undefined" != typeof $environment && $environment["stash-version"] ? "Stash" : "undefined" != typeof module && module.exports ? "Node.js" : "undefined" != typeof $task ? "Quantumult X" : "undefined" != typeof $loon ? "Loon" : "undefined" != typeof $rocket ? "Shadowrocket" : undefined;
+    constructor(_0x1f8521, _0x3bcbb3) {
+      {
+        this.name = _0x1f8521;
+        this.http = new _0x2d3f6e(this);
+        this.data = null;
+        this.dataFile = "box.dat";
+        this.logs = [];
+        this.isMute = false;
+        this.isNeedRewrite = false;
+        this.logSeparator = "\n";
+        this.startTime = new Date().getTime();
+        Object.assign(this, _0x3bcbb3);
+        this.log("", "🔔 " + this.name + ", 开始!");
+      }
     }
     isNode() {
-      return "Node.js" === this.getEnv();
+      {
+        return "undefined" !== typeof module && !!module.exports;
+      }
     }
     isQuanX() {
-      return "Quantumult X" === this.getEnv();
+      {
+        return "undefined" !== typeof $task;
+      }
     }
     isSurge() {
-      return "Surge" === this.getEnv();
+      {
+        return "undefined" !== typeof $httpClient && "undefined" === typeof $loon;
+      }
     }
     isLoon() {
-      return "Loon" === this.getEnv();
+      {
+        return "undefined" !== typeof $loon;
+      }
     }
     isShadowrocket() {
-      return "Shadowrocket" === this.getEnv();
-    }
-    isStash() {
-      return "Stash" === this.getEnv();
-    }
-    toObj(t, e = null) {
-      try {
-        return JSON.parse(t);
-      } catch {
-        return e;
+      {
+        return "undefined" !== typeof $rocket;
       }
     }
-    toStr(t, e = null, ...s) {
-      try {
-        return JSON.stringify(t, ...s);
-      } catch {
-        return e;
-      }
-    }
-    getjson(t, e) {
-      let s = e;
-      if (this.getdata(t)) {
+    toObj(_0x7155e5, _0x25588b = null) {
+      {
         try {
-          s = JSON.parse(this.getdata(t));
-        } catch {}
-      }
-      return s;
-    }
-    setjson(t, e) {
-      try {
-        return this.setdata(JSON.stringify(t), e);
-      } catch {
-        return false;
+          {
+            return JSON.parse(_0x7155e5);
+          }
+        } catch {
+          {
+            return _0x25588b;
+          }
+        }
       }
     }
-    getScript(t) {
-      return new Promise(e => {
-        this.get({
-          url: t
-        }, (t, s, i) => e(i));
-      });
+    toStr(_0x25b95d, _0x4334f9 = null) {
+      {
+        try {
+          {
+            return JSON.stringify(_0x25b95d);
+          }
+        } catch {
+          {
+            return _0x4334f9;
+          }
+        }
+      }
     }
-    runScript(t, e) {
-      return new Promise(s => {
-        let i = this.getdata("@chavy_boxjs_userCfgs.httpapi");
-        i = i ? i.replace(/\n/g, "").trim() : i;
-        let o = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");
-        o = o ? 1 * o : 20;
-        o = e && e.timeout ? e.timeout : o;
-        const [r, a] = i.split("@");
-        const n = {
-          url: `http://${a}/v1/scripting/evaluate`,
-          body: {
-            script_text: t,
-            mock_type: "cron",
-            timeout: o
-          },
-          headers: {
-            "X-Key": r,
-            Accept: "*/*"
-          },
-          timeout: o
-        };
-        this.post(n, (t, e, i) => s(i));
-      }).catch(t => this.logErr(t));
+    getjson(_0x327cbc, _0x43352a) {
+      {
+        let _0x2842a1 = _0x43352a;
+        const _0x1cae0b = this.getdata(_0x327cbc);
+        if (_0x1cae0b) {
+          {
+            try {
+              {
+                _0x2842a1 = JSON.parse(this.getdata(_0x327cbc));
+              }
+            } catch {}
+          }
+        }
+        return _0x2842a1;
+      }
+    }
+    setjson(_0x3f5166, _0x1e34d1) {
+      {
+        try {
+          {
+            return this.setdata(JSON.stringify(_0x3f5166), _0x1e34d1);
+          }
+        } catch {
+          {
+            return false;
+          }
+        }
+      }
+    }
+    getScript(_0x34f430) {
+      {
+        return new Promise(_0x3b39c3 => {
+          {
+            const _0x546ac0 = {
+              url: _0x34f430
+            };
+            this.get(_0x546ac0, (_0x314163, _0x307932, _0x5c7c3b) => _0x3b39c3(_0x5c7c3b));
+          }
+        });
+      }
+    }
+    runScript(_0xc74cfb, _0x1c21b4) {
+      {
+        return new Promise(_0x31c148 => {
+          {
+            let _0xf1d04d = this.getdata("@chavy_boxjs_userCfgs.httpapi");
+            _0xf1d04d = _0xf1d04d ? _0xf1d04d.replace(/\n/g, "").trim() : _0xf1d04d;
+            let _0x2a5518 = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");
+            _0x2a5518 = _0x2a5518 ? _0x2a5518 * 1 : 20;
+            _0x2a5518 = _0x1c21b4 && _0x1c21b4.timeout ? _0x1c21b4.timeout : _0x2a5518;
+            const [_0x31aa78, _0x2884ea] = _0xf1d04d.split("@");
+            const _0x499b29 = {
+              script_text: _0xc74cfb,
+              mock_type: "cron",
+              timeout: _0x2a5518
+            };
+            const _0x35f9e8 = {
+              "X-Key": _0x31aa78,
+              Accept: "*/*"
+            };
+            const _0x6b92c8 = {
+              url: "http: //" + _0x2884ea + "/v1/scripting/evaluate",
+              body: _0x499b29,
+              headers: _0x35f9e8
+            };
+            this.post(_0x6b92c8, (_0x269ce4, _0x543f39, _0x5c64fa) => _0x31c148(_0x5c64fa));
+          }
+        }).catch(_0xef6b79 => this.logErr(_0xef6b79));
+      }
     }
     loaddata() {
-      if (!this.isNode()) {
-        return {};
-      }
       {
-        this.fs = this.fs ? this.fs : require("fs");
-        this.path = this.path ? this.path : require("path");
-        const t = this.path.resolve(this.dataFile);
-        const e = this.path.resolve(process.cwd(), this.dataFile);
-        const s = this.fs.existsSync(t);
-        const i = !s && this.fs.existsSync(e);
-        if (!s && !i) {
-          return {};
-        }
-        {
-          const i = s ? t : e;
-          try {
-            return JSON.parse(this.fs.readFileSync(i));
-          } catch (t) {
-            return {};
+        if (this.isNode()) {
+          {
+            this.fs = this.fs ? this.fs : require("fs");
+            this.path = this.path ? this.path : require("path");
+            const _0x2de6a4 = this.path.resolve(this.dataFile);
+            const _0x57129d = this.path.resolve(process.cwd(), this.dataFile);
+            const _0x59a7e1 = this.fs.existsSync(_0x2de6a4);
+            const _0x59ca44 = !_0x59a7e1 && this.fs.existsSync(_0x57129d);
+            if (_0x59a7e1 || _0x59ca44) {
+              {
+                const _0x4edd54 = _0x59a7e1 ? _0x2de6a4 : _0x57129d;
+                try {
+                  {
+                    return JSON.parse(this.fs.readFileSync(_0x4edd54));
+                  }
+                } catch (_0x147f9b) {
+                  {
+                    return {};
+                  }
+                }
+              }
+            } else {
+              return {};
+            }
           }
+        } else {
+          return {};
         }
       }
     }
     writedata() {
-      if (this.isNode()) {
-        this.fs = this.fs ? this.fs : require("fs");
-        this.path = this.path ? this.path : require("path");
-        const t = this.path.resolve(this.dataFile);
-        const e = this.path.resolve(process.cwd(), this.dataFile);
-        const s = this.fs.existsSync(t);
-        const i = !s && this.fs.existsSync(e);
-        const o = JSON.stringify(this.data);
-        s ? this.fs.writeFileSync(t, o) : i ? this.fs.writeFileSync(e, o) : this.fs.writeFileSync(t, o);
-      }
-    }
-    lodash_get(t, e, s) {
-      const i = e.replace(/\[(\d+)\]/g, ".$1").split(".");
-      let o = t;
-      for (const t of i) if (o = Object(o)[t], undefined === o) {
-        return s;
-      }
-      return o;
-    }
-    lodash_set(t, e, s) {
-      Object(t) !== t || (Array.isArray(e) || (e = e.toString().match(/[^.[\]]+/g) || []), e.slice(0, -1).reduce((t, s, i) => Object(t[s]) === t[s] ? t[s] : t[s] = Math.abs(e[i + 1]) >> 0 == +e[i + 1] ? [] : {}, t)[e[e.length - 1]] = s);
-      return t;
-    }
-    getdata(t) {
-      let e = this.getval(t);
-      if (/^@/.test(t)) {
-        const [, s, i] = /^@(.*?)\.(.*?)$/.exec(t);
-        const o = s ? this.getval(s) : "";
-        if (o) {
-          try {
-            const t = JSON.parse(o);
-            e = t ? this.lodash_get(t, i, "") : e;
-          } catch (t) {
-            e = "";
+      {
+        if (this.isNode()) {
+          {
+            this.fs = this.fs ? this.fs : require("fs");
+            this.path = this.path ? this.path : require("path");
+            const _0x339db2 = this.path.resolve(this.dataFile);
+            const _0xc5ba14 = this.path.resolve(process.cwd(), this.dataFile);
+            const _0x1534f4 = this.fs.existsSync(_0x339db2);
+            const _0x24540a = !_0x1534f4 && this.fs.existsSync(_0xc5ba14);
+            const _0x42ad3c = JSON.stringify(this.data);
+            if (_0x1534f4) {
+              {
+                this.fs.writeFileSync(_0x339db2, _0x42ad3c);
+              }
+            } else {
+              if (_0x24540a) {
+                {
+                  this.fs.writeFileSync(_0xc5ba14, _0x42ad3c);
+                }
+              } else {
+                {
+                  this.fs.writeFileSync(_0x339db2, _0x42ad3c);
+                }
+              }
+            }
           }
         }
       }
-      return e;
     }
-    setdata(t, e) {
-      let s = false;
-      if (/^@/.test(e)) {
-        const [, i, o] = /^@(.*?)\.(.*?)$/.exec(e);
-        const r = this.getval(i);
-        const a = i ? "null" === r ? null : r || "{}" : "{}";
-        try {
-          const e = JSON.parse(a);
-          this.lodash_set(e, o, t);
-          s = this.setval(JSON.stringify(e), i);
-        } catch (e) {
-          const r = {};
-          this.lodash_set(r, o, t);
-          s = this.setval(JSON.stringify(r), i);
-        }
-      } else {
-        s = this.setval(t, e);
-      }
-      return s;
-    }
-    getval(t) {
-      switch (this.getEnv()) {
-        case "Surge":
-        case "Loon":
-        case "Stash":
-        case "Shadowrocket":
-          return $persistentStore.read(t);
-        case "Quantumult X":
-          return $prefs.valueForKey(t);
-        case "Node.js":
-          this.data = this.loaddata();
-          return this.data[t];
-        default:
-          return this.data && this.data[t] || null;
-      }
-    }
-    setval(t, e) {
-      switch (this.getEnv()) {
-        case "Surge":
-        case "Loon":
-        case "Stash":
-        case "Shadowrocket":
-          return $persistentStore.write(t, e);
-        case "Quantumult X":
-          return $prefs.setValueForKey(t, e);
-        case "Node.js":
-          this.data = this.loaddata();
-          this.data[e] = t;
-          this.writedata();
-          return true;
-        default:
-          return this.data && this.data[e] || null;
-      }
-    }
-    initGotEnv(t) {
-      this.got = this.got ? this.got : require("got");
-      this.cktough = this.cktough ? this.cktough : require("tough-cookie");
-      this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar();
-      t && (t.headers = t.headers ? t.headers : {}, t && (t.headers = t.headers ? t.headers : {}, undefined === t.headers.cookie && undefined === t.headers.Cookie && undefined === t.cookieJar && (t.cookieJar = this.ckjar)));
-    }
-    get(t, e = () => {}) {
-      switch (t.headers && (delete t.headers["Content-Type"], delete t.headers["Content-Length"], delete t.headers["content-type"], delete t.headers["content-length"]), t.params && (t.url += "?" + this.queryStr(t.params)), undefined === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = false), this.isQuanX() && (t.opts ? t.opts.redirection = false : t.opts = {
-        redirection: false
-      })), this.getEnv()) {
-        case "Surge":
-        case "Loon":
-        case "Stash":
-        case "Shadowrocket":
-        default:
-          this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
-            "X-Surge-Skip-Scripting": false
-          }));
-          $httpClient.get(t, (t, s, i) => {
-            !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode);
-            e(t, s, i);
-          });
-          break;
-        case "Quantumult X":
-          this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
-            hints: false
-          }));
-          $task.fetch(t).then(t => {
-            const {
-              statusCode: s,
-              statusCode: i,
-              headers: o,
-              body: r,
-              bodyBytes: a
-            } = t;
-            e(null, {
-              status: s,
-              statusCode: i,
-              headers: o,
-              body: r,
-              bodyBytes: a
-            }, r, a);
-          }, t => e(t && t.error || "UndefinedError"));
-          break;
-        case "Node.js":
-          let s = require("iconv-lite");
-          this.initGotEnv(t);
-          this.got(t).on("redirect", (t, e) => {
-            try {
-              if (t.headers["set-cookie"]) {
-                const s = t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
-                s && this.ckjar.setCookieSync(s, null);
-                e.cookieJar = this.ckjar;
+    lodash_get(_0x1b9664, _0x2d6fb1, _0x34fa66 = undefined) {
+      {
+        const _0x36687f = _0x2d6fb1.replace(/[(d+)]/g, ".$1").split(".");
+        let _0x208d5d = _0x1b9664;
+        for (const _0x2f74df of _0x36687f) {
+          {
+            _0x208d5d = Object(_0x208d5d)[_0x2f74df];
+            if (_0x208d5d === undefined) {
+              {
+                return _0x34fa66;
               }
-            } catch (t) {
-              this.logErr(t);
             }
-          }).then(t => {
-            const {
-              statusCode: i,
-              statusCode: o,
-              headers: r,
-              rawBody: a
-            } = t;
-            const n = s.decode(a, this.encoding);
-            e(null, {
-              status: i,
-              statusCode: o,
-              headers: r,
-              rawBody: a,
-              body: n
-            }, n);
-          }, t => {
-            const {
-              message: i,
-              response: o
-            } = t;
-            e(i, o, o && s.decode(o.rawBody, this.encoding));
-          });
-          break;
+          }
+        }
+        return _0x208d5d;
       }
     }
-    post(t, e = () => {}) {
-      const s = t.method ? t.method.toLocaleLowerCase() : "post";
-      switch (t.body && t.headers && !t.headers["Content-Type"] && !t.headers["content-type"] && (t.headers["content-type"] = "application/x-www-form-urlencoded"), t.headers && (delete t.headers["Content-Length"], delete t.headers["content-length"]), undefined === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = false), this.isQuanX() && (t.opts ? t.opts.redirection = false : t.opts = {
-        redirection: false
-      })), this.getEnv()) {
-        case "Surge":
-        case "Loon":
-        case "Stash":
-        case "Shadowrocket":
-        default:
-          this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
-            "X-Surge-Skip-Scripting": false
-          }));
-          $httpClient[s](t, (t, s, i) => {
-            !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode);
-            e(t, s, i);
-          });
-          break;
-        case "Quantumult X":
-          t.method = s;
-          this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
-            hints: false
-          }));
-          $task.fetch(t).then(t => {
-            const {
-              statusCode: s,
-              statusCode: i,
-              headers: o,
-              body: r,
-              bodyBytes: a
-            } = t;
-            e(null, {
-              status: s,
-              statusCode: i,
-              headers: o,
-              body: r,
-              bodyBytes: a
-            }, r, a);
-          }, t => e(t && t.error || "UndefinedError"));
-          break;
-        case "Node.js":
-          let i = require("iconv-lite");
-          this.initGotEnv(t);
-          const {
-            url: o,
-            ...r
-          } = t;
-          this.got[s](o, r).then(t => {
-            const {
-              statusCode: s,
-              statusCode: o,
-              headers: r,
-              rawBody: a
-            } = t;
-            const n = i.decode(a, this.encoding);
-            e(null, {
-              status: s,
-              statusCode: o,
-              headers: r,
-              rawBody: a,
-              body: n
-            }, n);
-          }, t => {
-            const {
-              message: s,
-              response: o
-            } = t;
-            e(s, o, o && i.decode(o.rawBody, this.encoding));
-          });
-          break;
+    lodash_set(_0x47465e, _0x370c69, _0x30a00a) {
+      {
+        if (Object(_0x47465e) !== _0x47465e) {
+          return _0x47465e;
+        }
+        if (!Array.isArray(_0x370c69)) {
+          _0x370c69 = _0x370c69.toString().match(/[^.[]]+/g) || [];
+        }
+        _0x370c69.slice(0, -1).reduce((_0x427b61, _0xf08e05, _0x4f53ee) => Object(_0x427b61[_0xf08e05]) === _0x427b61[_0xf08e05] ? _0x427b61[_0xf08e05] : _0x427b61[_0xf08e05] = Math.abs(_0x370c69[_0x4f53ee + 1]) >> 0 === +_0x370c69[_0x4f53ee + 1] ? [] : {}, _0x47465e)[_0x370c69[_0x370c69.length - 1]] = _0x30a00a;
+        return _0x47465e;
       }
     }
-    time(t, e = null) {
-      const s = e ? new Date(e) : new Date();
-      let i = {
-        "M+": s.getMonth() + 1,
-        "d+": s.getDate(),
-        "H+": s.getHours(),
-        "m+": s.getMinutes(),
-        "s+": s.getSeconds(),
-        "q+": Math.floor((s.getMonth() + 3) / 3),
-        S: s.getMilliseconds()
-      };
-      /(y+)/.test(t) && (t = t.replace(RegExp.$1, (s.getFullYear() + "").substr(4 - RegExp.$1.length)));
-      for (let e in i) new RegExp("(" + e + ")").test(t) && (t = t.replace(RegExp.$1, 1 == RegExp.$1.length ? i[e] : ("00" + i[e]).substr(("" + i[e]).length)));
-      return t;
-    }
-    queryStr(t) {
-      let e = "";
-      for (const s in t) {
-        let i = t[s];
-        null != i && "" !== i && ("object" == typeof i && (i = JSON.stringify(i)), e += `${s}=${i}&`);
-      }
-      e = e.substring(0, e.length - 1);
-      return e;
-    }
-    msg(e = t, s = "", i = "", o = {}) {
-      const r = t => {
-        const {
-          $open: e,
-          $copy: s,
-          $media: i,
-          $mediaMime: o
-        } = t;
-        switch (typeof t) {
-          case undefined:
-            return t;
-          case "string":
-            switch (this.getEnv()) {
-              case "Surge":
-              case "Stash":
-              default:
-                return {
-                  url: t
-                };
-              case "Loon":
-              case "Shadowrocket":
-                return t;
-              case "Quantumult X":
-                return {
-                  "open-url": t
-                };
-              case "Node.js":
-                return;
+    getdata(_0x39048d) {
+      {
+        let _0x25f175 = this.getval(_0x39048d);
+        if (/^@/.test(_0x39048d)) {
+          {
+            const [, _0x13c60e, _0x23c23e] = /^@(.*?).(.*?)$/.exec(_0x39048d);
+            const _0x2a7018 = _0x13c60e ? this.getval(_0x13c60e) : "";
+            if (_0x2a7018) {
+              {
+                try {
+                  {
+                    const _0x206931 = JSON.parse(_0x2a7018);
+                    _0x25f175 = _0x206931 ? this.lodash_get(_0x206931, _0x23c23e, "") : _0x25f175;
+                  }
+                } catch (_0x14e42f) {
+                  {
+                    _0x25f175 = "";
+                  }
+                }
+              }
             }
-          case "object":
-            switch (this.getEnv()) {
-              case "Surge":
-              case "Stash":
-              case "Shadowrocket":
-              default:
+          }
+        }
+        return _0x25f175;
+      }
+    }
+    setdata(_0xc25275, _0xbc3c04) {
+      {
+        let _0x3e869f = false;
+        if (/^@/.test(_0xbc3c04)) {
+          {
+            const [, _0x4f1a82, _0xf13903] = /^@(.*?).(.*?)$/.exec(_0xbc3c04);
+            const _0x3bb233 = this.getval(_0x4f1a82);
+            const _0x4ad1ca = _0x4f1a82 ? _0x3bb233 === "null" ? null : _0x3bb233 || "{}" : "{}";
+            try {
+              {
+                const _0x54f23f = JSON.parse(_0x4ad1ca);
+                this.lodash_set(_0x54f23f, _0xf13903, _0xc25275);
+                _0x3e869f = this.setval(JSON.stringify(_0x54f23f), _0x4f1a82);
+              }
+            } catch (_0x1bc485) {
+              {
+                const _0x4fe9e9 = {};
+                this.lodash_set(_0x4fe9e9, _0xf13903, _0xc25275);
+                _0x3e869f = this.setval(JSON.stringify(_0x4fe9e9), _0x4f1a82);
+              }
+            }
+          }
+        } else {
+          {
+            _0x3e869f = this.setval(_0xc25275, _0xbc3c04);
+          }
+        }
+        return _0x3e869f;
+      }
+    }
+    getval(_0x5f2f8) {
+      {
+        if (this.isSurge() || this.isLoon()) {
+          {
+            return $persistentStore.read(_0x5f2f8);
+          }
+        } else {
+          if (this.isQuanX()) {
+            {
+              return $prefs.valueForKey(_0x5f2f8);
+            }
+          } else {
+            if (this.isNode()) {
+              {
+                this.data = this.loaddata();
+                return this.data[_0x5f2f8];
+              }
+            } else {
+              {
+                return this.data && this.data[_0x5f2f8] || null;
+              }
+            }
+          }
+        }
+      }
+    }
+    setval(_0xa6e19c, _0x38503c) {
+      {
+        if (this.isSurge() || this.isLoon()) {
+          {
+            return $persistentStore.write(_0xa6e19c, _0x38503c);
+          }
+        } else {
+          if (this.isQuanX()) {
+            {
+              return $prefs.setValueForKey(_0xa6e19c, _0x38503c);
+            }
+          } else {
+            if (this.isNode()) {
+              {
+                this.data = this.loaddata();
+                this.data[_0x38503c] = _0xa6e19c;
+                this.writedata();
+                return true;
+              }
+            } else {
+              {
+                return this.data && this.data[_0x38503c] || null;
+              }
+            }
+          }
+        }
+      }
+    }
+    initGotEnv(_0x507a68) {
+      {
+        this.got = this.got ? this.got : require("got");
+        this.cktough = this.cktough ? this.cktough : require("tough-cookie");
+        this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar();
+        if (_0x507a68) {
+          {
+            _0x507a68.headers = _0x507a68.headers ? _0x507a68.headers : {};
+            if (undefined === _0x507a68.headers.Cookie && undefined === _0x507a68.cookieJar) {
+              {
+                _0x507a68.cookieJar = this.ckjar;
+              }
+            }
+          }
+        }
+      }
+    }
+    get(_0x49168e, _0x44b1f7 = () => {}) {
+      {
+        if (_0x49168e.headers) {
+          {
+            delete _0x49168e.headers["Content-Type"];
+            delete _0x49168e.headers["Content-Length"];
+          }
+        }
+        if (this.isSurge() || this.isLoon()) {
+          {
+            if (this.isSurge() && this.isNeedRewrite) {
+              {
+                _0x49168e.headers = _0x49168e.headers || {};
+                const _0x4be22f = {
+                  "X-Surge-Skip-Scripting": false
+                };
+                Object.assign(_0x49168e.headers, _0x4be22f);
+              }
+            }
+            $httpClient.get(_0x49168e, (_0x12b0e7, _0x5db25a, _0xf2dca6) => {
+              {
+                if (!_0x12b0e7 && _0x5db25a) {
+                  {
+                    _0x5db25a.body = _0xf2dca6;
+                    _0x5db25a.statusCode = _0x5db25a.status;
+                  }
+                }
+                _0x44b1f7(_0x12b0e7, _0x5db25a, _0xf2dca6);
+              }
+            });
+          }
+        } else {
+          if (this.isQuanX()) {
+            {
+              if (this.isNeedRewrite) {
                 {
-                  const r = {};
-                  let a = t.openUrl || t.url || t["open-url"] || e;
-                  a && Object.assign(r, {
-                    action: "open-url",
-                    url: a
-                  });
-                  let n = t["update-pasteboard"] || t.updatePasteboard || s;
-                  if (n && Object.assign(r, {
-                    action: "clipboard",
-                    text: n
-                  }), i) {
-                    let t;
-                    let e;
-                    let s;
-                    if (i.startsWith("http")) {
-                      t = i;
-                    } else {
-                      if (i.startsWith("data:")) {
-                        const [t] = i.split(";");
-                        const [, o] = i.split(",");
-                        e = o;
-                        s = t.replace("data:", "");
-                      } else {
-                        e = i;
-                        s = (t => {
-                          const e = {
-                            JVBERi0: "application/pdf",
-                            R0lGODdh: "image/gif",
-                            R0lGODlh: "image/gif",
-                            iVBORw0KGgo: "image/png",
-                            "/9j/": "image/jpg"
-                          };
-                          for (var s in e) if (0 === t.indexOf(s)) {
-                            return e[s];
+                  _0x49168e.opts = _0x49168e.opts || {};
+                  const _0x3456e7 = {
+                    hints: false
+                  };
+                  Object.assign(_0x49168e.opts, _0x3456e7);
+                }
+              }
+              $task.fetch(_0x49168e).then(_0x5165e9 => {
+                {
+                  const {
+                    statusCode: _0x1d4824,
+                    statusCode,
+                    headers,
+                    body
+                  } = _0x5165e9;
+                  const _0x52bb03 = {
+                    status: _0x1d4824,
+                    statusCode: statusCode,
+                    headers: headers,
+                    body: body
+                  };
+                  _0x44b1f7(null, _0x52bb03, body);
+                }
+              }, _0x466a29 => _0x44b1f7(_0x466a29));
+            }
+          } else {
+            if (this.isNode()) {
+              {
+                this.initGotEnv(_0x49168e);
+                this.got(_0x49168e).on("redirect", (_0x36f05e, _0x3ec64d) => {
+                  {
+                    try {
+                      {
+                        if (_0x36f05e.headers["set-cookie"]) {
+                          {
+                            const _0x5398a8 = _0x36f05e.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
+                            if (_0x5398a8) {
+                              {
+                                this.ckjar.setCookieSync(_0x5398a8, null);
+                              }
+                            }
+                            _0x3ec64d.cookieJar = this.ckjar;
                           }
-                          return null;
-                        })(i);
+                        }
+                      }
+                    } catch (_0x2d4e9e) {
+                      {
+                        this.logErr(_0x2d4e9e);
                       }
                     }
-                    Object.assign(r, {
-                      "media-url": t,
-                      "media-base64": e,
-                      "media-base64-mime": o ?? s
-                    });
                   }
-                  Object.assign(r, {
-                    "auto-dismiss": t["auto-dismiss"],
-                    sound: t.sound
-                  });
-                  return r;
-                }
-              case "Loon":
-                {
-                  const s = {};
-                  let o = t.openUrl || t.url || t["open-url"] || e;
-                  o && Object.assign(s, {
-                    openUrl: o
-                  });
-                  let r = t.mediaUrl || t["media-url"];
-                  i?.startsWith("http") && (r = i);
-                  r && Object.assign(s, {
-                    mediaUrl: r
-                  });
-                  console.log(JSON.stringify(s));
-                  return s;
-                }
-              case "Quantumult X":
-                {
-                  const o = {};
-                  let r = t["open-url"] || t.url || t.openUrl || e;
-                  r && Object.assign(o, {
-                    "open-url": r
-                  });
-                  let a = t["media-url"] || t.mediaUrl;
-                  i?.startsWith("http") && (a = i);
-                  a && Object.assign(o, {
-                    "media-url": a
-                  });
-                  let n = t["update-pasteboard"] || t.updatePasteboard || s;
-                  n && Object.assign(o, {
-                    "update-pasteboard": n
-                  });
-                  console.log(JSON.stringify(o));
-                  return o;
-                }
-              case "Node.js":
-                return;
+                }).then(_0xe842ba => {
+                  {
+                    const {
+                      statusCode: _0x2c95ca,
+                      statusCode,
+                      headers,
+                      body
+                    } = _0xe842ba;
+                    const _0x1208dc = {
+                      status: _0x2c95ca,
+                      statusCode: statusCode,
+                      headers: headers,
+                      body: body
+                    };
+                    _0x44b1f7(null, _0x1208dc, body);
+                  }
+                }, _0x21236c => {
+                  {
+                    const {
+                      message: _0x2812c8,
+                      response: _0x8ff866
+                    } = _0x21236c;
+                    _0x44b1f7(_0x2812c8, _0x8ff866, _0x8ff866 && _0x8ff866.body);
+                  }
+                });
+              }
             }
-          default:
-            return;
+          }
+        }
+      }
+    }
+    post(_0x493c37, _0x4825ae = () => {}) {
+      {
+        const _0x2d7a36 = _0x493c37.method ? _0x493c37.method.toLocaleLowerCase() : "post";
+        if (_0x493c37.body && _0x493c37.headers && !_0x493c37.headers["Content-Type"]) {
+          {
+            _0x493c37.headers["Content-Type"] = "application/x-www-form-urlencoded";
+          }
+        }
+        if (_0x493c37.headers) {
+          delete _0x493c37.headers["Content-Length"];
+        }
+        if (this.isSurge() || this.isLoon()) {
+          {
+            if (this.isSurge() && this.isNeedRewrite) {
+              {
+                _0x493c37.headers = _0x493c37.headers || {};
+                const _0x493e38 = {
+                  "X-Surge-Skip-Scripting": false
+                };
+                Object.assign(_0x493c37.headers, _0x493e38);
+              }
+            }
+            $httpClient[_0x2d7a36](_0x493c37, (_0x3e1434, _0x335ddc, _0xedf804) => {
+              {
+                if (!_0x3e1434 && _0x335ddc) {
+                  {
+                    _0x335ddc.body = _0xedf804;
+                    _0x335ddc.statusCode = _0x335ddc.status;
+                  }
+                }
+                _0x4825ae(_0x3e1434, _0x335ddc, _0xedf804);
+              }
+            });
+          }
+        } else {
+          if (this.isQuanX()) {
+            {
+              _0x493c37.method = _0x2d7a36;
+              if (this.isNeedRewrite) {
+                {
+                  _0x493c37.opts = _0x493c37.opts || {};
+                  const _0x4b7955 = {
+                    hints: false
+                  };
+                  Object.assign(_0x493c37.opts, _0x4b7955);
+                }
+              }
+              $task.fetch(_0x493c37).then(_0x20def6 => {
+                {
+                  const {
+                    statusCode: _0x53afb9,
+                    statusCode,
+                    headers,
+                    body
+                  } = _0x20def6;
+                  const _0x4e3259 = {
+                    status: _0x53afb9,
+                    statusCode: statusCode,
+                    headers: headers,
+                    body: body
+                  };
+                  _0x4825ae(null, _0x4e3259, body);
+                }
+              }, _0x12e1bc => _0x4825ae(_0x12e1bc));
+            }
+          } else {
+            if (this.isNode()) {
+              {
+                this.initGotEnv(_0x493c37);
+                const {
+                  url,
+                  ..._0x310f7c
+                } = _0x493c37;
+                this.got[_0x2d7a36](url, _0x310f7c).then(_0x34fca7 => {
+                  {
+                    const {
+                      statusCode: _0x2403ec,
+                      statusCode,
+                      headers,
+                      body
+                    } = _0x34fca7;
+                    const _0x1d7ac7 = {
+                      status: _0x2403ec,
+                      statusCode: statusCode,
+                      headers: headers,
+                      body: body
+                    };
+                    _0x4825ae(null, _0x1d7ac7, body);
+                  }
+                }, _0x5cb919 => {
+                  {
+                    const {
+                      message: _0x14e0ba,
+                      response: _0x3d76af
+                    } = _0x5cb919;
+                    _0x4825ae(_0x14e0ba, _0x3d76af, _0x3d76af && _0x3d76af.body);
+                  }
+                });
+              }
+            }
+          }
+        }
+      }
+    }
+    put(_0x2bd048, _0x30d9c7 = () => {}) {
+      {
+        const _0x5dcec7 = _0x2bd048.method ? _0x2bd048.method.toLocaleLowerCase() : "put";
+        if (_0x2bd048.body && _0x2bd048.headers && !_0x2bd048.headers["Content-Type"]) {
+          {
+            _0x2bd048.headers["Content-Type"] = "application/x-www-form-urlencoded";
+          }
+        }
+        if (_0x2bd048.headers) {
+          delete _0x2bd048.headers["Content-Length"];
+        }
+        if (this.isSurge() || this.isLoon()) {
+          {
+            if (this.isSurge() && this.isNeedRewrite) {
+              {
+                _0x2bd048.headers = _0x2bd048.headers || {};
+                const _0x2c842a = {
+                  "X-Surge-Skip-Scripting": false
+                };
+                Object.assign(_0x2bd048.headers, _0x2c842a);
+              }
+            }
+            $httpClient[_0x5dcec7](_0x2bd048, (_0x2874c4, _0x4bfca4, _0xa6f340) => {
+              {
+                if (!_0x2874c4 && _0x4bfca4) {
+                  {
+                    _0x4bfca4.body = _0xa6f340;
+                    _0x4bfca4.statusCode = _0x4bfca4.status;
+                  }
+                }
+                _0x30d9c7(_0x2874c4, _0x4bfca4, _0xa6f340);
+              }
+            });
+          }
+        } else {
+          if (this.isQuanX()) {
+            {
+              _0x2bd048.method = _0x5dcec7;
+              if (this.isNeedRewrite) {
+                {
+                  _0x2bd048.opts = _0x2bd048.opts || {};
+                  const _0x1847d1 = {
+                    hints: false
+                  };
+                  Object.assign(_0x2bd048.opts, _0x1847d1);
+                }
+              }
+              $task.fetch(_0x2bd048).then(_0x30f8ad => {
+                {
+                  const {
+                    statusCode: _0x2f114d,
+                    statusCode,
+                    headers,
+                    body
+                  } = _0x30f8ad;
+                  const _0x2eacc7 = {
+                    status: _0x2f114d,
+                    statusCode: statusCode,
+                    headers: headers,
+                    body: body
+                  };
+                  _0x30d9c7(null, _0x2eacc7, body);
+                }
+              }, _0x784519 => _0x30d9c7(_0x784519));
+            }
+          } else {
+            if (this.isNode()) {
+              {
+                this.initGotEnv(_0x2bd048);
+                const {
+                  url,
+                  ..._0x3aaeab
+                } = _0x2bd048;
+                this.got[_0x5dcec7](url, _0x3aaeab).then(_0x85af9e => {
+                  {
+                    const {
+                      statusCode: _0x3e79bb,
+                      statusCode,
+                      headers,
+                      body
+                    } = _0x85af9e;
+                    const _0x1b554a = {
+                      status: _0x3e79bb,
+                      statusCode: statusCode,
+                      headers: headers,
+                      body: body
+                    };
+                    _0x30d9c7(null, _0x1b554a, body);
+                  }
+                }, _0x5465e9 => {
+                  {
+                    const {
+                      message: _0x4dac9c,
+                      response: _0x5c1e4f
+                    } = _0x5465e9;
+                    _0x30d9c7(_0x4dac9c, _0x5c1e4f, _0x5c1e4f && _0x5c1e4f.body);
+                  }
+                });
+              }
+            }
+          }
+        }
+      }
+    }
+    time(_0x322e7d, _0x30ff45 = null) {
+      {
+        const _0x568f8c = _0x30ff45 ? new Date(_0x30ff45) : new Date();
+        let _0x1626c3 = {
+          "M+": _0x568f8c.getMonth() + 1,
+          "d+": _0x568f8c.getDate(),
+          "H+": _0x568f8c.getHours(),
+          "m+": _0x568f8c.getMinutes(),
+          "s+": _0x568f8c.getSeconds(),
+          "q+": Math.floor((_0x568f8c.getMonth() + 3) / 3),
+          S: _0x568f8c.getMilliseconds()
+        };
+        if (/(y+)/.test(_0x322e7d)) {
+          _0x322e7d = _0x322e7d.replace(RegExp.$1, (_0x568f8c.getFullYear() + "").substr(4 - RegExp.$1.length));
+        }
+        for (let _0x5ff065 in _0x1626c3) if (new RegExp("(" + _0x5ff065 + ")").test(_0x322e7d)) {
+          _0x322e7d = _0x322e7d.replace(RegExp.$1, RegExp.$1.length == 1 ? _0x1626c3[_0x5ff065] : ("00" + _0x1626c3[_0x5ff065]).substr(("" + _0x1626c3[_0x5ff065]).length));
+        }
+        return _0x322e7d;
+      }
+    }
+    msg(_0x4e4eda = _0x2c8fc7, _0x4a7b45 = "", _0x3a171f = "", _0x33d793) {
+      const _0x2423f8 = _0x24d1b0 => {
+        if (!_0x24d1b0) {
+          return _0x24d1b0;
+        }
+        if (typeof _0x24d1b0 === "string") {
+          {
+            if (this.isLoon()) {
+              return _0x24d1b0;
+            } else {
+              if (this.isQuanX()) {
+                return {
+                  "open-url": _0x24d1b0
+                };
+              } else {
+                if (this.isSurge()) {
+                  return {
+                    url: _0x24d1b0
+                  };
+                } else {
+                  return undefined;
+                }
+              }
+            }
+          }
+        } else {
+          if (typeof _0x24d1b0 === "object") {
+            if (this.isLoon()) {
+              {
+                let _0x3ac1b = _0x24d1b0.openUrl || _0x24d1b0.url || _0x24d1b0["open-url"];
+                let _0x53b409 = _0x24d1b0.mediaUrl || _0x24d1b0["media-url"];
+                const _0x507742 = {
+                  openUrl: _0x3ac1b,
+                  mediaUrl: _0x53b409
+                };
+                return _0x507742;
+              }
+            } else {
+              if (this.isQuanX()) {
+                {
+                  let _0x536550 = _0x24d1b0["open-url"] || _0x24d1b0.url || _0x24d1b0.openUrl;
+                  let _0x56c0c3 = _0x24d1b0["media-url"] || _0x24d1b0.mediaUrl;
+                  const _0x4bede1 = {
+                    "open-url": _0x536550,
+                    "media-url": _0x56c0c3
+                  };
+                  return _0x4bede1;
+                }
+              } else {
+                if (this.isSurge()) {
+                  {
+                    let _0x42a95c = _0x24d1b0.url || _0x24d1b0.openUrl || _0x24d1b0["open-url"];
+                    const _0x7ef044 = {
+                      url: _0x42a95c
+                    };
+                    return _0x7ef044;
+                  }
+                }
+              }
+            }
+          } else {
+            return undefined;
+          }
         }
       };
       if (!this.isMute) {
-        switch (this.getEnv()) {
-          case "Surge":
-          case "Loon":
-          case "Stash":
-          case "Shadowrocket":
-          default:
-            $notification.post(e, s, i, r(o));
-            break;
-          case "Quantumult X":
-            $notify(e, s, i, r(o));
-            break;
-          case "Node.js":
-            break;
+        if (this.isSurge() || this.isLoon()) {
+          $notification.post(_0x4e4eda, _0x4a7b45, _0x3a171f, _0x2423f8(_0x33d793));
+        } else {
+          if (this.isQuanX()) {
+            $notify(_0x4e4eda, _0x4a7b45, _0x3a171f, _0x2423f8(_0x33d793));
+          }
         }
       }
       if (!this.isMuteLog) {
-        let t = ["", "==============📣系统通知📣=============="];
-        t.push(e);
-        s && t.push(s);
-        i && t.push(i);
-        console.log(t.join("\n"));
-        this.logs = this.logs.concat(t);
+        let _0x4f10b5 = ["", "==============📣系统通知📣=============="];
+        _0x4f10b5.push(_0x4e4eda);
+        _0x4a7b45 ? _0x4f10b5.push(_0x4a7b45) : "";
+        _0x3a171f ? _0x4f10b5.push(_0x3a171f) : "";
+        console.log(_0x4f10b5.join("\n"));
+        this.logs = this.logs.concat(_0x4f10b5);
       }
     }
-    debug(...t) {
-      this.logLevels[this.logLevel] <= this.logLevels.debug && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.debug}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    log(..._0x4f4f6f) {
+      if (_0x4f4f6f.length > 0) {
+        this.logs = [...this.logs, ..._0x4f4f6f];
+      }
+      console.log(_0x4f4f6f.join(this.logSeparator));
     }
-    info(...t) {
-      this.logLevels[this.logLevel] <= this.logLevels.info && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.info}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
-    }
-    warn(...t) {
-      this.logLevels[this.logLevel] <= this.logLevels.warn && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.warn}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
-    }
-    error(...t) {
-      this.logLevels[this.logLevel] <= this.logLevels.error && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.error}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
-    }
-    log(...t) {
-      t.length > 0 && (this.logs = [...this.logs, ...t]);
-      console.log(t.map(t => t ?? String(t)).join(this.logSeparator));
-    }
-    logErr(t, e) {
-      switch (this.getEnv()) {
-        case "Surge":
-        case "Loon":
-        case "Stash":
-        case "Shadowrocket":
-        case "Quantumult X":
-        default:
-          this.log("", `❗️${this.name}, 错误!`, e, t);
-          break;
-        case "Node.js":
-          this.log("", `❗️${this.name}, 错误!`, e, undefined !== t.message ? t.message : t, t.stack);
-          break;
+    logErr(_0x266e55, _0x513ff6) {
+      const _0x3bc7b8 = !this.isSurge() && !this.isQuanX() && !this.isLoon();
+      if (!_0x3bc7b8) {
+        this.log("", "❗️" + this.name + ", 错误!", _0x266e55);
+      } else {
+        this.log("", "❗️" + this.name + ", 错误!", _0x266e55.stack);
       }
     }
-    wait(t) {
-      return new Promise(e => setTimeout(e, t));
+    wait(_0x58e799) {
+      return new Promise(_0xaafa27 => setTimeout(_0xaafa27, _0x58e799));
     }
-    done(t = {}) {
-      const e = (new Date().getTime() - this.startTime) / 1000;
-      switch (this.log("", `🔔${this.name}, 结束! 🕛 ${e} 秒`), this.log(), this.getEnv()) {
-        case "Surge":
-        case "Loon":
-        case "Stash":
-        case "Shadowrocket":
-        case "Quantumult X":
-        default:
-          $done(t);
-          break;
-        case "Node.js":
-          process.exit(1);
+    done(_0x1c17f8 = {}) {
+      const _0x34af87 = new Date().getTime();
+      const _0x1cfdeb = (_0x34af87 - this.startTime) / 1000;
+      this.log("", "🔔" + this.name + ", 结束!🕛" + _0x1cfdeb + "秒");
+      this.log();
+      if (this.isSurge() || this.isQuanX() || this.isLoon()) {
+        $done(_0x1c17f8);
       }
     }
-  }(t, e);
+  }(_0x2c8fc7, _0x4e00f5);
 }
